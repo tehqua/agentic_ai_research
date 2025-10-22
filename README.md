@@ -1,5 +1,3 @@
----
-
 # 🧠 Agentic AI Research System
 
 **Agentic AI Research System** là một công cụ Python tự động hóa quy trình **nghiên cứu khoa học** trong lĩnh vực *Agentic AI*.
