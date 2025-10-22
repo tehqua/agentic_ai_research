@@ -1,66 +1,117 @@
-# 🧠 Agentic AI Research System
+# Agentic AI Research System
 
-**Agentic AI Research System** là một pipeline tự động hóa quy trình nghiên cứu và tổng hợp xu hướng trong lĩnh vực **Agentic AI**.  
-Hệ thống này hoạt động như một "trợ lý nghiên cứu" — tự động thu thập bài báo mới, tóm tắt nội dung, phân tích xu hướng, gợi ý ý tưởng nghiên cứu và tạo báo cáo hoàn chỉnh ở định dạng Markdown.
-
----
-
-## 🚀 Tính năng chính
-
-| Module | Mô tả |
-|--------|-------|
-| **DataCollectorAgent** | Thu thập dữ liệu nghiên cứu từ ArXiv và Semantic Scholar API. |
-| **SummarizerAgent** | Tóm tắt văn bản khoa học bằng phương pháp extractive summarization. |
-| **TrendAnalysisAgent** | Phân tích xu hướng từ khóa, cụm từ và chủ đề nổi bật. |
-| **IdeaGeneratorAgent** | Tạo ý tưởng nghiên cứu mới dựa trên xu hướng và khoảng trống tri thức. |
-| **ReportGeneratorAgent** | Sinh báo cáo Markdown tổng hợp toàn bộ quy trình nghiên cứu. |
-| **AgenticResearchOrchestrator** | Điều phối toàn bộ workflow từ thu thập đến báo cáo. |
+**Agentic AI Research System** là một công cụ Python tự động hóa quy trình nghiên cứu khoa học trong lĩnh vực *Agentic AI*.
+Hệ thống này thu thập, tóm tắt, phân tích xu hướng và đề xuất ý tưởng nghiên cứu dựa trên các bài báo khoa học từ **ArXiv** và **Semantic Scholar**.
 
 ---
 
-## 📁 Cấu trúc thư mục
-agentic-research/
+## 1. Giới thiệu
+
+Dự án này mô phỏng một **AI Research Assistant** có khả năng:
+
+* Thu thập dữ liệu nghiên cứu mới nhất từ nhiều nguồn mở.
+* Tự động tóm tắt nội dung bài báo.
+* Phân tích xu hướng và trích xuất từ khóa quan trọng.
+* Đề xuất ý tưởng nghiên cứu tiềm năng dựa trên dữ liệu thu thập được.
+* Tạo **báo cáo Markdown** chuyên nghiệp để tổng hợp và trình bày kết quả nghiên cứu.
+
+---
+
+## 2. Kiến trúc hệ thống
+
+Hệ thống được thiết kế theo **mô hình đa tác nhân (Multi-Agent Architecture)**, trong đó mỗi *agent* đảm nhận một vai trò cụ thể trong pipeline R&D tự động.
+
+| Tác nhân                        | Vai trò                                                         |
+| ------------------------------- | --------------------------------------------------------------- |
+| **DataCollectorAgent**          | Thu thập papers từ ArXiv và Semantic Scholar                    |
+| **SummarizerAgent**             | Tóm tắt văn bản bằng phương pháp extractive summarization       |
+| **TrendAnalysisAgent**          | Phân tích xu hướng, trích xuất từ khóa và cụm từ quan trọng     |
+| **IdeaGeneratorAgent**          | Tạo ý tưởng nghiên cứu mới dựa trên xu hướng và từ khóa nổi bật |
+| **ReportGeneratorAgent**        | Sinh báo cáo tổng hợp (Markdown)                                |
+| **AgenticResearchOrchestrator** | Điều phối toàn bộ pipeline từ thu thập đến báo cáo              |
+
+**Sơ đồ kiến trúc hệ thống :**
+
+```
+![System Architecture](https://github.com/tehqua/agentic_ai_research/blob/main/architecture.png)
+```
+
+---
+
+## 3. Cấu trúc thư mục
+
+```
+agentic_ai_research/
 │
-├── data/ # Nơi lưu các file papers thu thập được
-├── reports/ # Nơi lưu các báo cáo Markdown được tạo tự động
-├── main.py # File chạy chính (chứa toàn bộ pipeline)
-├── requirements.txt # Danh sách thư viện cần thiết
-└── README.md # Tài liệu hướng dẫn này
-
+├── main.py              # Mã nguồn chính
+├── data/                # Nơi lưu papers đã thu thập (JSON)
+├── reports/             # Báo cáo Markdown được sinh tự động
+└── requirements.txt     # (Tùy chọn) Danh sách thư viện cần cài đặt
+```
 
 ---
 
-## ⚙️ Cài đặt môi trường
+## 4. Cài đặt
 
-### 1️⃣ Clone repository
+### Yêu cầu
+
+* Python 3.9+
+* Internet để truy cập ArXiv và Semantic Scholar API
+
+### Cài đặt thư viện
+
 ```bash
-git clone https://github.com/<your-username>/agentic-research.git
-cd agentic-research
+pip install arxiv requests
+```
 
-### 2️⃣ Tạo môi trường ảo và cài đặt thư viện
-python -m venv venv
-source venv/bin/activate        # Trên macOS/Linux
-venv\Scripts\activate           # Trên Windows
+---
 
-pip install -r requirements.txt
+## 5. Cách sử dụng
 
-### 3️⃣ File requirements.txt gợi ý:
-arxiv
-requests
+Chạy pipeline nghiên cứu tự động với lệnh:
 
-🧩 Cách sử dụng
-Chạy pipeline đầy đủ
+```bash
 python main.py
+```
 
+Cấu hình mặc định trong `main()`:
 
-Hệ thống sẽ tự động:
+* Từ khóa tìm kiếm: `"Agentic AI OR AI Agents OR Autonomous AI"`
+* Thời gian: 30 ngày gần nhất
+* Số lượng papers tối đa: 50
 
-Thu thập các bài báo mới nhất về Agentic AI từ ArXiv và Semantic Scholar.
+Khi chạy xong, hệ thống sẽ:
 
-Tóm tắt nội dung từng bài.
+1. Thu thập dữ liệu từ ArXiv và Semantic Scholar
+2. Tóm tắt nội dung bài báo
+3. Phân tích xu hướng nghiên cứu
+4. Tạo ý tưởng nghiên cứu mới
+5. Xuất báo cáo Markdown trong thư mục `reports/`
 
-Phân tích xu hướng từ khóa và cụm từ phổ biến.
+---
 
-Sinh ý tưởng nghiên cứu mới.
+## 6. Đầu ra
 
-Xuất báo cáo chi tiết tại thư mục reports/.
+Ví dụ báo cáo sinh ra tự động:
+
+```
+reports/research_report_20251022_153045.md
+```
+
+Báo cáo bao gồm:
+
+* Tổng hợp số lượng bài báo
+* Từ khóa và cụm từ nổi bật
+* Phân tích chủ đề nghiên cứu
+* Đề xuất ý tưởng nghiên cứu
+* Danh sách bài báo mới nhất kèm tóm tắt
+
+---
+
+## 7. Hướng phát triển
+
+* Tích hợp mô hình LLM để tóm tắt ngữ nghĩa sâu hơn.
+* Bổ sung giao diện web trực quan (Streamlit hoặc FastAPI).
+* Mở rộng phân tích xu hướng theo từng lĩnh vực cụ thể.
+
+---
