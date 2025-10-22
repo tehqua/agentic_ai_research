@@ -32,7 +32,7 @@ Hệ thống được xây dựng theo mô hình **đa tác nhân (Multi-Agent A
 
 ### 🔧 Sơ đồ kiến trúc hệ thống
 
-<img width="1180" height="785" alt="System Architecture" src="https://github.com/user-attachments/assets/af80b6a4-52a9-4b19-be60-5d4cf954385d" />
+<img width="1180" height="785" alt="System Architecture" src="https://raw.githubusercontent.com/tehqua/agentic_ai_research/refs/heads/main/architecture.png" />
 
 ---
 
