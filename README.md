@@ -31,11 +31,8 @@ Hệ thống được thiết kế theo **mô hình đa tác nhân (Multi-Agent 
 | **AgenticResearchOrchestrator** | Điều phối toàn bộ pipeline từ thu thập đến báo cáo              |
 
 **Sơ đồ kiến trúc hệ thống :**
-
-```
 <img width="1180" height="785" alt="image" src="https://github.com/user-attachments/assets/af80b6a4-52a9-4b19-be60-5d4cf954385d" />
 
-```
 
 ---
 
