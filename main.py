@@ -661,7 +661,7 @@ class ReportGeneratorAgent:
             # Recent Papers
             f.write("## 📰 Các Bài Báo Mới Nhất\n\n")
             sorted_papers = sorted(
-                papers, key=lambda x: x.get('published', ''), reverse=True
+                papers, key=lambda x: x.get("title") or "", reverse=False
             )
 
             for i, paper in enumerate(sorted_papers[:20], 1):
