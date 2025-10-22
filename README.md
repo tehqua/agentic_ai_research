@@ -33,7 +33,7 @@ Hệ thống được thiết kế theo **mô hình đa tác nhân (Multi-Agent 
 **Sơ đồ kiến trúc hệ thống :**
 
 ```
-![System Architecture](https://raw.githubusercontent.com/tehqua/agentic_ai_research/refs/heads/main/architecture.png)
+![System Architecture](https://raw.githubusercontent.com/tehqua/agentic_ai_research/main/architecture.png)
 ```
 
 ---
