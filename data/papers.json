@@ -1171,5 +1171,1261 @@
       "cs.AI"
     ],
     "source": "arxiv"
+  },
+  {
+    "title": "EffiReasonTrans: RL-Optimized Reasoning for Code Translation",
+    "authors": [
+      "Yanlin Wang",
+      "Rongyi Ou",
+      "Yanli Wang",
+      "Mingwei Liu",
+      "Jiachi Chen",
+      "Ensheng Shi",
+      "Xilin Liu",
+      "Yuchi Ma",
+      "Zibin Zheng"
+    ],
+    "abstract": "Code translation is a crucial task in software development and maintenance.\nWhile recent advancements in large language models (LLMs) have improved\nautomated code translation accuracy, these gains often come at the cost of\nincreased inference latency, hindering real-world development workflows that\ninvolve human-in-the-loop inspection. To address this trade-off, we propose\nEffiReasonTrans, a training framework designed to improve translation accuracy\nwhile balancing inference latency. We first construct a high-quality\nreasoning-augmented dataset by prompting a stronger language model,\nDeepSeek-R1, to generate intermediate reasoning and target translations. Each\n(source code, reasoning, target code) triplet undergoes automated syntax and\nfunctionality checks to ensure reliability. Based on this dataset, we employ a\ntwo-stage training strategy: supervised fine-tuning on reasoning-augmented\nsamples, followed by reinforcement learning to further enhance accuracy and\nbalance inference latency. We evaluate EffiReasonTrans on six translation\npairs. Experimental results show that it consistently improves translation\naccuracy (up to +49.2% CA and +27.8% CodeBLEU compared to the base model) while\nreducing the number of generated tokens (up to -19.3%) and lowering inference\nlatency in most cases (up to -29.0%). Ablation studies further confirm the\ncomplementary benefits of the two-stage training framework. Additionally,\nEffiReasonTrans demonstrates improved translation accuracy when integrated into\nagent-based frameworks. Our code and data are available at\nhttps://github.com/DeepSoftwareAnalytics/EffiReasonTrans.",
+    "published": "2025-10-21T17:55:39+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18863v1",
+    "categories": [
+      "cs.SE"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "An Encoder-Decoder Foundation Chemical Language Model for Generative Polymer Design",
+    "authors": [
+      "Harikrishna Sahu",
+      "Wei Xiong",
+      "Anagha Savit",
+      "Shivank S Shukla",
+      "Rampi Ramprasad"
+    ],
+    "abstract": "Traditional machine learning has advanced polymer discovery, yet direct\ngeneration of chemically valid and synthesizable polymers without exhaustive\nenumeration remains a challenge. Here we present polyT5, an encoder-decoder\nchemical language model based on the T5 architecture, trained to understand and\ngenerate polymer structures. polyT5 enables both property prediction and the\ntargeted generation of polymers conditioned on desired property values. We\ndemonstrate its utility for dielectric polymer design, seeking candidates with\ndielectric constant >3, bandgap >4 eV, and glass transition temperature >400 K,\nalongside melt-processability and solubility requirements. From over 20,000\ngenerated promising candidates, one was experimentally synthesized and\nvalidated, showing strong agreement with predictions. To further enhance\nusability, we integrated polyT5 within an agentic AI framework that couples it\nwith a general-purpose LLM, allowing natural language interaction for property\nprediction and generative design. Together, these advances establish a\nversatile and accessible framework for accelerated polymer discovery.",
+    "published": "2025-10-21T17:53:56+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18860v1",
+    "categories": [
+      "cond-mat.mtrl-sci",
+      "cond-mat.soft"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "Lyapunov-Aware Quantum-Inspired Reinforcement Learning for Continuous-Time Vehicle Control: A Feasibility Study",
+    "authors": [
+      "Nutkritta Kraipatthanapong",
+      "Natthaphat Thathong",
+      "Pannita Suksawas",
+      "Thanunnut Klunklin",
+      "Kritin Vongthonglua",
+      "Krit Attahakul",
+      "Aueaphum Aueawatthanaphisut"
+    ],
+    "abstract": "This paper presents a novel Lyapunov-Based Quantum Reinforcement Learning\n(LQRL) framework that integrates quantum policy optimization with Lyapunov\nstability analysis for continuous-time vehicle control. The proposed approach\ncombines the representational power of variational quantum circuits (VQCs) with\na stability-aware policy gradient mechanism to ensure asymptotic convergence\nand safe decision-making under dynamic environments. The vehicle longitudinal\ncontrol problem was formulated as a continuous-state reinforcement learning\ntask, where the quantum policy network generates control actions subject to\nLyapunov stability constraints. Simulation experiments were conducted in a\nclosed-loop adaptive cruise control scenario using a quantum-inspired policy\ntrained under stability feedback. The results demonstrate that the LQRL\nframework successfully embeds Lyapunov stability verification into quantum\npolicy learning, enabling interpretable and stability-aware control\nperformance. Although transient overshoot and Lyapunov divergence were observed\nunder aggressive acceleration, the system maintained bounded state evolution,\nvalidating the feasibility of integrating safety guarantees within quantum\nreinforcement learning architectures. The proposed framework provides a\nfoundational step toward provably safe quantum control in autonomous systems\nand hybrid quantum-classical optimization domains.",
+    "published": "2025-10-21T17:44:45+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18852v1",
+    "categories": [
+      "quant-ph",
+      "cs.AI",
+      "cs.LG",
+      "cs.SY",
+      "eess.SY"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "MADR: MPC-guided Adversarial DeepReach",
+    "authors": [
+      "Ryan Teoh",
+      "Sander Tonkens",
+      "William Sharpless",
+      "Aijia Yang",
+      "Zeyuan Feng",
+      "Somil Bansal",
+      "Sylvia Herbert"
+    ],
+    "abstract": "Hamilton-Jacobi (HJ) Reachability offers a framework for generating safe\nvalue functions and policies in the face of adversarial disturbance, but is\nlimited by the curse of dimensionality. Physics-informed deep learning is able\nto overcome this infeasibility, but itself suffers from slow and inaccurate\nconvergence, primarily due to weak PDE gradients and the complexity of\nself-supervised learning. A few works, recently, have demonstrated that\nenriching the self-supervision process with regular supervision (based on the\nnature of the optimal control problem), greatly accelerates convergence and\nsolution quality, however, these have been limited to single player problems\nand simple games. In this work, we introduce MADR: MPC-guided Adversarial\nDeepReach, a general framework to robustly approximate the two-player, zero-sum\ndifferential game value function. In doing so, MADR yields the corresponding\noptimal strategies for both players in zero-sum games as well as safe policies\nfor worst-case robustness. We test MADR on a multitude of high-dimensional\nsimulated and real robotic agents with varying dynamics and games, finding that\nour approach significantly out-performs state-of-the-art baselines in\nsimulation and produces impressive results in hardware.",
+    "published": "2025-10-21T17:36:52+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18845v1",
+    "categories": [
+      "cs.RO",
+      "cs.SY",
+      "eess.SY"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "An AI enhanced approach to the tree unimodality conjecture",
+    "authors": [
+      "Eric Ramos",
+      "Sunny Sun"
+    ],
+    "abstract": "Given a graph $G$, its independence sequence is the integral sequence\n$a_1,a_2,...,a_n$, where $a_i$ is the number of independent sets of vertices of\nsize i. In the late 80's Alavi, Erdos, Malde, Schwenk showed that this sequence\nneed not be unimodal for general graphs, but conjectured that it is always\nunimodal whenever $G$ is a tree. This conjecture was then naturally generalized\nto claim that the independence sequence of trees should be log concave, in the\nsense that $a_i^2$ is always above $a_{i-1}a_{i+1}$. This conjecture stood for\nmany years, until in 2023, Kadrawi, Levit, Yosef, and Mirzrachi proved that\nthere were exactly two trees on 26 vertices whose independence sequence was not\nlog concave. In this paper, we use the AI architecture PatternBoost, developed\nby Charton, Ellenberg, Wagner, and Williamson to train a machine to find\ncounter-examples to the log-concavity conjecture. We will discuss the successes\nof this approach - finding tens of thousands of new counter-examples to\nlog-concavity with vertex set sizes varying from 27 to 101 - and some of its\nfascinating failures.",
+    "published": "2025-10-21T17:23:09+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18826v1",
+    "categories": [
+      "math.CO"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "Search Self-play: Pushing the Frontier of Agent Capability without Supervision",
+    "authors": [
+      "Hongliang Lu",
+      "Yuhang Wen",
+      "Pengyu Cheng",
+      "Ruijin Ding",
+      "Haotian Xu",
+      "Jiaqi Guo",
+      "Chutian Wang",
+      "Haonan Chen",
+      "Xiaoxi Jiang",
+      "Guanjun Jiang"
+    ],
+    "abstract": "Reinforcement learning with verifiable rewards (RLVR) has become the\nmainstream technique for training LLM agents. However, RLVR highly depends on\nwell-crafted task queries and corresponding ground-truth answers to provide\naccurate rewards, which requires massive human efforts and hinders the RL\nscaling processes, especially under agentic scenarios. Although a few recent\nworks explore task synthesis methods, the difficulty of generated agentic tasks\ncan hardly be controlled to provide effective RL training advantages. To\nachieve agentic RLVR with higher scalability, we explore self-play training for\ndeep search agents, in which the learning LLM utilizes multi-turn search engine\ncalling and acts simultaneously as both a task proposer and a problem solver.\nThe task proposer aims to generate deep search queries with well-defined\nground-truth answers and increasing task difficulty. The problem solver tries\nto handle the generated search queries and output the correct answer\npredictions. To ensure that each generated search query has accurate ground\ntruth, we collect all the searching results from the proposer's trajectory as\nexternal knowledge, then conduct retrieval-augmentation generation (RAG) to\ntest whether the proposed query can be correctly answered with all necessary\nsearch documents provided. In this search self-play (SSP) game, the proposer\nand the solver co-evolve their agent capabilities through both competition and\ncooperation. With substantial experimental results, we find that SSP can\nsignificantly improve search agents' performance uniformly on various\nbenchmarks without any supervision under both from-scratch and continuous RL\ntraining setups. The code is at https://github.com/Alibaba-Quark/SSP.",
+    "published": "2025-10-21T17:19:35+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18821v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "An Explainable Hybrid AI Framework for Enhanced Tuberculosis and Symptom Detection",
+    "authors": [
+      "Neel Patel",
+      "Alexander Wong",
+      "Ashkan Ebadi"
+    ],
+    "abstract": "Tuberculosis remains a critical global health issue, particularly in\nresource-limited and remote areas. Early detection is vital for treatment, yet\nthe lack of skilled radiologists underscores the need for artificial\nintelligence (AI)-driven screening tools. Developing reliable AI models is\nchallenging due to the necessity for large, high-quality datasets, which are\ncostly to obtain. To tackle this, we propose a teacher--student framework which\nenhances both disease and symptom detection on chest X-rays by integrating two\nsupervised heads and a self-supervised head. Our model achieves an accuracy of\n98.85% for distinguishing between COVID-19, tuberculosis, and normal cases, and\na macro-F1 score of 90.09% for multilabel symptom detection, significantly\noutperforming baselines. The explainability assessments also show the model\nbases its predictions on relevant anatomical features, demonstrating promise\nfor deployment in clinical screening and triage settings.",
+    "published": "2025-10-21T17:18:55+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18819v1",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "A Unified Perspective on Optimization in Machine Learning and Neuroscience: From Gradient Descent to Neural Adaptation",
+    "authors": [
+      "Jesús García Fernández",
+      "Nasir Ahmad",
+      "Marcel van Gerven"
+    ],
+    "abstract": "Iterative optimization is central to modern artificial intelligence (AI) and\nprovides a crucial framework for understanding adaptive systems. This review\nprovides a unified perspective on this subject, bridging classic theory with\nneural network training and biological learning. Although gradient-based\nmethods, powered by the efficient but biologically implausible backpropagation\n(BP), dominate machine learning, their computational demands can hinder\nscalability in high-dimensional settings. In contrast, derivative-free or\nzeroth-order (ZO) optimization feature computationally lighter approaches that\nrely only on function evaluations and randomness. While generally less sample\nefficient, recent breakthroughs demonstrate that modern ZO methods can\neffectively approximate gradients and achieve performance competitive with BP\nin neural network models. This ZO paradigm is also particularly relevant for\nbiology. Its core principles of random exploration (probing) and\nfeedback-guided adaptation (reinforcing) parallel key mechanisms of biological\nlearning, offering a mathematically principled perspective on how the brain\nlearns. In this review, we begin by categorizing optimization approaches based\non the order of derivative information they utilize, ranging from first-,\nsecond-, and higher-order gradient-based to ZO methods. We then explore how\nthese methods are adapted to the unique challenges of neural network training\nand the resulting learning dynamics. Finally, we build upon these insights to\nview biological learning through an optimization lens, arguing that a ZO\nparadigm leverages the brain's intrinsic noise as a computational resource.\nThis framework not only illuminates our understanding of natural intelligence\nbut also holds vast implications for neuromorphic hardware, helping us design\nfast and energy-efficient AI systems that exploit intrinsic hardware noise.",
+    "published": "2025-10-21T17:10:15+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18812v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "Integrating Large Language Models and Evaluating Student Outcomes in an Introductory Computer Science Course",
+    "authors": [
+      "Annapurna Vadaparty",
+      "David H. Smith IV",
+      "Samvrit Srinath",
+      "Mounika Padala",
+      "Christine Alvarado",
+      "Jamie Gorson Benario",
+      "Daniel Zingaro",
+      "Leo Porter"
+    ],
+    "abstract": "Generative AI (GenAI) models have broad implications for education in\ngeneral, impacting the foundations of what we teach and how we assess. This is\nespecially true in computing, where LLMs tuned for coding have demonstrated\nshockingly good performance on the types of assignments historically used in\nintroductory CS (CS1) courses. As a result, CS1 courses will need to change\nwhat skills are taught and how they are assessed. Computing education\nresearchers have begun to study student use of LLMs, but there remains much to\nbe understood about the ways that these tools affect student outcomes. In this\npaper, we present the design and evaluation of a new CS1 course at a large\nresearch-intensive university that integrates the use of LLMs as a learning\ntool for students. We describe the design principles used to create our new\nCS1-LLM course, our new course objectives, and evaluation of student outcomes\nand perceptions throughout the course as measured by assessment scores and\nsurveys. Our findings suggest that 1) student exam performance outcomes,\nincluding differences among demographic groups, are largely similar to\nhistorical outcomes for courses without integration of LLM tools, 2) large,\nopen-ended projects may be particularly valuable in an LLM context, and 3)\nstudents predominantly found the LLM tools helpful, although some had concerns\nregarding over-reliance on the tools.",
+    "published": "2025-10-21T16:59:54+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18806v1",
+    "categories": [
+      "cs.CY"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "Computational Foundations for Strategic Coopetition: Formalizing Interdependence and Complementarity",
+    "authors": [
+      "Vik Pant",
+      "Eric Yu"
+    ],
+    "abstract": "Modern socio-technical systems are characterized by strategic coopetition\nwhere actors simultaneously cooperate to create value and compete to capture\nit. While conceptual modeling languages like i* provide rich qualitative\nrepresentations of strategic dependencies, they lack mechanisms for\nquantitative analysis of dynamic trade-offs. Conversely, classical game theory\noffers mathematical rigor but strips away contextual richness. This technical\nreport bridges this gap by developing computational foundations that formalize\ntwo critical dimensions of coopetition: interdependence and complementarity. We\nground interdependence in i* structural dependency analysis, translating\ndepender-dependee-dependum relationships into quantitative interdependence\ncoefficients through a structured translation framework. We formalize\ncomplementarity following Brandenburger and Nalebuff's Added Value concept,\nmodeling synergistic value creation with validated parameterization. We\nintegrate structural dependencies with bargaining power in value appropriation\nand introduce a game-theoretic formulation where Nash Equilibrium incorporates\nstructural interdependence. Validation combines comprehensive experimental\ntesting across power and logarithmic value function specifications,\ndemonstrating functional form robustness, with empirical application to the\nSamsung-Sony S-LCD joint venture (2004-2011), where logarithmic specifications\nachieve superior empirical fit (validation score 45/60) while power functions\nprovide theoretical tractability. This technical report serves as the\nfoundational reference for a coordinated research program examining strategic\ncoopetition in requirements engineering and multi-agent systems, with companion\nwork addressing trust dynamics, team production, and reciprocity mechanisms.",
+    "published": "2025-10-21T16:57:40+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18802v1",
+    "categories": [
+      "cs.MA",
+      "cs.AI",
+      "cs.SE"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "FeClustRE: Hierarchical Clustering and Semantic Tagging of App Features from User Reviews",
+    "authors": [
+      "Max Tiessler",
+      "Quim Motger"
+    ],
+    "abstract": "[Context and motivation.] Extracting features from mobile app reviews is\nincreasingly important for multiple requirements engineering (RE) tasks.\nHowever, existing methods struggle to turn noisy, ambiguous feedback into\ninterpretable insights. [Question/problem.] Syntactic approaches lack semantic\ndepth, while large language models (LLMs) often miss fine-grained features or\nfail to structure them coherently. In addition, existing methods output flat\nlists of features without semantic organization, limiting interpretation and\ncomparability. Consequently, current feature extraction approaches do not\nprovide structured, meaningful representations of app features. As a result,\npractitioners face fragmented information that hinder requirement analysis,\nprioritization, and cross-app comparison, among other use cases. [Principal\nideas/results.] In this context, we propose FeClustRE, a framework integrating\nhybrid feature extraction, hierarchical clustering with auto-tuning and\nLLM-based semantic labelling. FeClustRE combines syntactic parsing with LLM\nenrichment, organizes features into clusters, and automatically generates\nmeaningful taxonomy labels. We evaluate FeClustRE on public benchmarks for\nextraction correctness and on a sample study of generative AI assistant app\nreviews for clustering quality, semantic coherence, and interpretability.\n[Contribution.] Overall, FeClustRE delivers (1) a hybrid framework for feature\nextraction and taxonomy generation, (2) an auto-tuning mechanism with a\ncomprehensive evaluation methodology, and (3) open-source and replicable\nimplementation. These contributions bridge user feedback and feature\nunderstanding, enabling deeper insights into current and emerging requirements.",
+    "published": "2025-10-21T16:54:21+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18799v1",
+    "categories": [
+      "cs.SE"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "WebSeer: Training Deeper Search Agents through Reinforcement Learning with Self-Reflection",
+    "authors": [
+      "Guanzhong He",
+      "Zhen Yang",
+      "Jinxin Liu",
+      "Bin Xu",
+      "Lei Hou",
+      "Juanzi Li"
+    ],
+    "abstract": "Search agents have achieved significant advancements in enabling intelligent\ninformation retrieval and decision-making within interactive environments.\nAlthough reinforcement learning has been employed to train agentic models\ncapable of more dynamic interactive retrieval, existing methods are limited by\nshallow tool-use depth and the accumulation of errors over multiple iterative\ninteractions. In this paper, we present WebSeer, a more intelligent search\nagent trained via reinforcement learning enhanced with a self-reflection\nmechanism. Specifically, we construct a large dataset annotated with reflection\npatterns and design a two-stage training framework that unifies cold start and\nreinforcement learning within the self-reflection paradigm for real-world\nweb-based environments, which enables the model to generate longer and more\nreflective tool-use trajectories. Our approach substantially extends tool-use\nchains and improves answer accuracy. Using a single 14B model, we achieve\nstate-of-the-art results on HotpotQA and SimpleQA, with accuracies of 72.3% and\n90.0%, respectively, and demonstrate strong generalization to\nout-of-distribution datasets. The code is available at\nhttps://github.com/99hgz/WebSeer",
+    "published": "2025-10-21T16:52:00+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18798v1",
+    "categories": [
+      "cs.CL"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "KAT-Coder Technical Report",
+    "authors": [
+      "Zizheng Zhan",
+      "Ken Deng",
+      "Xiaojiang Zhang",
+      "Jinghui Wang",
+      "Huaixi Tang",
+      "Zhiyi Lai",
+      "Haoyang Huang",
+      "Wen Xiang",
+      "Kun Wu",
+      "Wenhao Zhuang",
+      "Minglei Zhang",
+      "Shaojie Wang",
+      "Shangpeng Yan",
+      "Kepeng Lei",
+      "Zongxian Feng",
+      "Huiming Wang",
+      "Zheng Lin",
+      "Mengtong Li",
+      "Mengfei Xie",
+      "Yinghan Cui",
+      "Xuxing Chen",
+      "Chao Wang",
+      "Weihao Li",
+      "Wenqiang Zhu",
+      "Jiarong Zhang",
+      "Jingxuan Xu",
+      "Songwei Yu",
+      "Yifan Yao",
+      "Xinping Lei",
+      "Han Li",
+      "Junqi Xiong",
+      "Zuchen Gao",
+      "Dailin Li",
+      "Haimo Li",
+      "Jiaheng Liu",
+      "Yuqun Zhang",
+      "Junyi Peng",
+      "Haotian Zhang",
+      "Bin Chen"
+    ],
+    "abstract": "Recent advances in large language models (LLMs) have enabled progress in\nagentic coding, where models autonomously reason, plan, and act within\ninteractive software development workflows. However, bridging the gap between\nstatic text-based training and dynamic real-world agentic execution remains a\ncore challenge. In this technical report, we present KAT-Coder, a large-scale\nagentic code model trained through a multi-stage curriculum encompassing\nMid-Term Training, Supervised Fine-Tuning (SFT), Reinforcement Fine-Tuning\n(RFT), and Reinforcement-to-Deployment Adaptation. The Mid-Term stage enhances\nreasoning, planning, and reflection capabilities through a corpus of real\nsoftware engineering data and synthetic agentic interactions. The SFT stage\nconstructs a million-sample dataset balancing twenty programming languages, ten\ndevelopment contexts, and ten task archetypes. The RFT stage introduces a novel\nmulti-ground-truth reward formulation for stable and sample-efficient policy\noptimization. Finally, the Reinforcement-to-Deployment phase adapts the model\nto production-grade IDE environments using Error-Masked SFT and Tree-Structured\nTrajectory Training. In summary, these stages enable KAT-Coder to achieve\nrobust tool-use reliability, instruction alignment, and long-context reasoning,\nforming a deployable foundation for real-world intelligent coding agents. Our\nKAT series 32B model, KAT-Dev, has been open-sourced on\nhttps://huggingface.co/Kwaipilot/KAT-Dev.",
+    "published": "2025-10-21T16:27:47+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18779v1",
+    "categories": [
+      "cs.CL"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "A Frequentist Statistical Introduction to Variational Inference, Autoencoders, and Diffusion Models",
+    "authors": [
+      "Yen-Chi Chen"
+    ],
+    "abstract": "While Variational Inference (VI) is central to modern generative models like\nVariational Autoencoders (VAEs) and Denoising Diffusion Models (DDMs), its\npedagogical treatment is split across disciplines. In statistics, VI is\ntypically framed as a Bayesian method for posterior approximation. In machine\nlearning, however, VAEs and DDMs are developed from a Frequentist viewpoint,\nwhere VI is used to approximate a maximum likelihood estimator. This creates a\nbarrier for statisticians, as the principles behind VAEs and DDMs are hard to\ncontextualize without a corresponding Frequentist introduction to VI. This\npaper provides that introduction: we explain the theory for VI, VAEs, and DDMs\nfrom a purely Frequentist perspective, starting with the classical\nExpectation-Maximization (EM) algorithm. We show how VI arises as a scalable\nsolution for intractable E-steps and how VAEs and DDMs are natural,\ndeep-learning-based extensions of this framework, thereby bridging the gap\nbetween classical statistical inference and modern generative AI.",
+    "published": "2025-10-21T16:25:19+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18777v1",
+    "categories": [
+      "stat.ML",
+      "cs.LG",
+      "stat.CO",
+      "stat.ME"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "AI use in American newspapers is widespread, uneven, and rarely disclosed",
+    "authors": [
+      "Jenna Russell",
+      "Marzena Karpinska",
+      "Destiny Akinode",
+      "Katherine Thai",
+      "Bradley Emi",
+      "Max Spero",
+      "Mohit Iyyer"
+    ],
+    "abstract": "AI is rapidly transforming journalism, but the extent of its use in published\nnewspaper articles remains unclear. We address this gap by auditing a\nlarge-scale dataset of 186K articles from online editions of 1.5K American\nnewspapers published in the summer of 2025. Using Pangram, a state-of-the-art\nAI detector, we discover that approximately 9% of newly-published articles are\neither partially or fully AI-generated. This AI use is unevenly distributed,\nappearing more frequently in smaller, local outlets, in specific topics such as\nweather and technology, and within certain ownership groups. We also analyze\n45K opinion pieces from Washington Post, New York Times, and Wall Street\nJournal, finding that they are 6.4 times more likely to contain AI-generated\ncontent than news articles from the same publications, with many AI-flagged\nop-eds authored by prominent public figures. Despite this prevalence, we find\nthat AI use is rarely disclosed: a manual audit of 100 AI-flagged articles\nfound only five disclosures of AI use. Overall, our audit highlights the\nimmediate need for greater transparency and updated editorial standards\nregarding the use of AI in journalism to maintain public trust.",
+    "published": "2025-10-21T16:22:07+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18774v1",
+    "categories": [
+      "cs.CL"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "The minimal wave speed of time-periodic traveling waves arising from a diffusive Kermack-McKendrick model with seasonality and nonlocal delayed interactions",
+    "authors": [
+      "Shuang-Ming Wang"
+    ],
+    "abstract": "This paper is concerned with the non-existence of time-periodic traveling\nwave solution with speed less than the critical speed for diffusive\nKermack-McKendrick epidemic model incorporating seasonality and nonlocal\ninteractions induced by latent period. By a technical construction of upper and\nlower solutions on truncated intervals for an auxiliary linear equation, we\novercome the challenges arising from the coupling of nonlocal delay and the\nfact that the system is non-autonomous. Thus the critical value $c^*$ defined\nin [S.-M. Wang et al., Nonlinear Anal. Real World Appl., 55 (2020) 103117] is\nconfirmed as the minimal wave speed of time-periodic traveling waves. We have\ncompletely solved the open problem [S.-M. Wang et al., Nonlinear Anal. Real\nWorld Appl., 55 (2020) 103117]",
+    "published": "2025-10-21T16:14:06+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18767v1",
+    "categories": [
+      "math.AP"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "Sharing the Load: Distributed Model-Predictive Control for Precise Multi-Rover Cargo Transport",
+    "authors": [
+      "Alexander Krawciw",
+      "Sven Lilge",
+      "Luka Antonyshyn",
+      "Timothy D. Barfoot"
+    ],
+    "abstract": "For autonomous cargo transportation, teams of mobile robots can provide more\noperational flexibility than a single large robot. In these scenarios,\nprecision in both inter-vehicle distance and path tracking is key. With this\nmotivation, we develop a distributed model-predictive controller (MPC) for\nmulti-vehicle cargo operations that builds on the precise path-tracking of\nlidar teach and repeat. To carry cargo, a following vehicle must maintain a\nEuclidean distance offset from a lead vehicle regardless of the path curvature.\nOur approach uses a shared map to localize the robots relative to each other\nwithout GNSS or direct observations. We compare our approach to a centralized\nMPC and a baseline approach that directly measures the inter-vehicle distance.\nThe distributed MPC shows equivalent nominal performance to the more complex\ncentralized MPC. Using a direct measurement of the relative distance between\nthe leader and follower shows improved tracking performance in close-range\nscenarios but struggles with long-range offsets. The operational flexibility\nprovided by distributing the computation makes it well suited for real\ndeployments. We evaluate four types of convoyed path trackers with over 10 km\nof driving in a coupled convoy. With convoys of two and three rovers, the\nproposed distributed MPC method works in real-time to allow map-based convoying\nto maintain maximum spacing within 20 cm of the target in various conditions.",
+    "published": "2025-10-21T16:14:03+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18766v1",
+    "categories": [
+      "cs.RO"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "sNVMe-oF: Secure and Efficient Disaggregated Storage",
+    "authors": [
+      "Marcin Chrapek",
+      "Meni Orenbach",
+      "Ahmad Atamli",
+      "Marcin Copik",
+      "Fritz Alder",
+      "Torsten Hoefler"
+    ],
+    "abstract": "Disaggregated storage with NVMe-over-Fabrics (NVMe-oF) has emerged as the\nstandard solution in modern data centers, achieving superior performance,\nresource utilization, and power efficiency. Simultaneously, confidential\ncomputing (CC) is becoming the de facto security paradigm, enforcing stronger\nisolation and protection for sensitive workloads. However, securing\nstate-of-the-art storage with traditional CC methods struggles to scale and\ncompromises performance or security. To address these issues, we introduce\nsNVMe-oF, a storage management system extending the NVMe-oF protocol and\nadhering to the CC threat model by providing confidentiality, integrity, and\nfreshness guarantees. sNVMe-oF offers an appropriate control path and novel\nconcepts such as counter-leasing. sNVMe-oF also optimizes data path performance\nby leveraging NVMe metadata, introducing a new disaggregated Hazel Merkle Tree\n(HMT), and avoiding redundant IPSec protections. We achieve this without\nmodifying the NVMe-oF protocol. To prevent excessive resource usage while\ndelivering line rate, sNVMe-oF also uses accelerators of CC-capable smart NICs.\nWe prototype sNVMe-oF on an NVIDIA BlueField-3 and demonstrate how it can\nachieve as little as 2% performance degradation for synthetic patterns and AI\ntraining.",
+    "published": "2025-10-21T16:01:36+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18756v1",
+    "categories": [
+      "cs.CR",
+      "cs.AR",
+      "cs.DC",
+      "cs.NI",
+      "cs.OS"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "Seg the HAB: Language-Guided Geospatial Algae Bloom Reasoning and Segmentation",
+    "authors": [
+      "Patterson Hsieh",
+      "Jerry Yeh",
+      "Mao-Chi He",
+      "Wen-Han Hsieh",
+      "Elvis Hsieh"
+    ],
+    "abstract": "Climate change is intensifying the occurrence of harmful algal bloom (HAB),\nparticularly cyanobacteria, which threaten aquatic ecosystems and human health\nthrough oxygen depletion, toxin release, and disruption of marine biodiversity.\nTraditional monitoring approaches, such as manual water sampling, remain\nlabor-intensive and limited in spatial and temporal coverage. Recent advances\nin vision-language models (VLMs) for remote sensing have shown potential for\nscalable AI-driven solutions, yet challenges remain in reasoning over imagery\nand quantifying bloom severity. In this work, we introduce ALGae Observation\nand Segmentation (ALGOS), a segmentation-and-reasoning system for HAB\nmonitoring that combines remote sensing image understanding with severity\nestimation. Our approach integrates GeoSAM-assisted human evaluation for\nhigh-quality segmentation mask curation and fine-tunes vision language model on\nseverity prediction using the Cyanobacteria Aggregated Manual Labels (CAML)\nfrom NASA. Experiments demonstrate that ALGOS achieves robust performance on\nboth segmentation and severity-level estimation, paving the way toward\npractical and automated cyanobacterial monitoring systems.",
+    "published": "2025-10-21T15:59:00+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18751v1",
+    "categories": [
+      "cs.AI",
+      "cs.CV"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "Causally Perturbed Fairness Testing",
+    "authors": [
+      "Chengwen Du",
+      "Tao Chen"
+    ],
+    "abstract": "To mitigate unfair and unethical discrimination over sensitive features\n(e.g., gender, age, or race), fairness testing plays an integral role in\nengineering systems that leverage AI models to handle tabular data. A key\nchallenge therein is how to effectively reveal fairness bugs under an\nintractable sample size using perturbation. Much current work has been focusing\non designing the test sample generators, ignoring the valuable knowledge about\ndata characteristics that can help guide the perturbation and hence limiting\ntheir full potential. In this paper, we seek to bridge such a gap by proposing\na generic framework of causally perturbed fairness testing, dubbed CausalFT.\nThrough causal inference, the key idea of CausalFT is to extract the most\ndirectly and causally relevant non-sensitive feature to its sensitive\ncounterpart, which can jointly influence the prediction of the label. Such a\ncausal relationship is then seamlessly injected into the perturbation to guide\na test sample generator. Unlike existing generator-level work, CausalFT serves\nas a higher-level framework that can be paired with diverse base generators.\nExtensive experiments on 1296 cases confirm that CausalFT can considerably\nimprove arbitrary base generators in revealing fairness bugs over 93% of the\ncases with acceptable extra runtime overhead. Compared with a state-of-the-art\napproach that ranks the non-sensitive features solely based on correlation,\nCausalFT performs significantly better on 64% cases while being much more\nefficient. Further, CausalFT can better improve bias resilience in nearly all\ncases.",
+    "published": "2025-10-21T15:20:30+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18719v1",
+    "categories": [
+      "cs.SE",
+      "cs.AI"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "Fetch.ai: An Architecture for Modern Multi-Agent Systems",
+    "authors": [
+      "Michael J. Wooldridge",
+      "Attila Bagoly",
+      "Jonathan J. Ward",
+      "Emanuele La Malfa",
+      "Gabriel Paludo Licks"
+    ],
+    "abstract": "Recent surges in LLM-driven intelligent systems largely overlook decades of\nfoundational multi-agent systems (MAS) research, resulting in frameworks with\ncritical limitations such as centralization and inadequate trust and\ncommunication protocols. This paper introduces the Fetch.ai architecture, an\nindustrial-strength platform designed to bridge this gap by facilitating the\nintegration of classical MAS principles with modern AI capabilities. We present\na novel, multi-layered solution built on a decentralized foundation of on-chain\nblockchain services for verifiable identity, discovery, and transactions. This\nis complemented by a comprehensive development framework for creating secure,\ninteroperable agents, a cloud-based platform for deployment, and an intelligent\norchestration layer where an agent-native LLM translates high-level human goals\ninto complex, multi-agent workflows. We demonstrate the deployed nature of this\nsystem through a decentralized logistics use case where autonomous agents\ndynamically discover, negotiate, and transact with one another securely.\nUltimately, the Fetch.ai stack provides a principled architecture for moving\nbeyond current agent implementations towards open, collaborative, and\neconomically sustainable multi-agent ecosystems.",
+    "published": "2025-10-21T14:53:56+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18699v1",
+    "categories": [
+      "cs.MA",
+      "cs.AI"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "Event-Grounding Graph: Unified Spatio-Temporal Scene Graph from Robotic Observations",
+    "authors": [
+      "Phuoc Nguyen",
+      "Francesco Verdoja",
+      "Ville Kyrki"
+    ],
+    "abstract": "A fundamental aspect for building intelligent autonomous robots that can\nassist humans in their daily lives is the construction of rich environmental\nrepresentations. While advances in semantic scene representations have enriched\nrobotic scene understanding, current approaches lack a connection between\nspatial features and dynamic events; e.g., connecting the blue mug to the event\nwashing a mug. In this work, we introduce the event-grounding graph (EGG), a\nframework grounding event interactions to spatial features of a scene. This\nrepresentation allows robots to perceive, reason, and respond to complex\nspatio-temporal queries. Experiments using real robotic data demonstrate EGG's\ncapability to retrieve relevant information and respond accurately to human\ninquiries concerning the environment and events within. Furthermore, the EGG\nframework's source code and evaluation dataset are released as open-source at:\nhttps://github.com/aalto-intelligent-robotics/EGG.",
+    "published": "2025-10-21T14:53:42+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18697v1",
+    "categories": [
+      "cs.RO"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "Reinforcement Learning with Imperfect Transition Predictions: A Bellman-Jensen Approach",
+    "authors": [
+      "Chenbei Lu",
+      "Zaiwei Chen",
+      "Tongxin Li",
+      "Chenye Wu",
+      "Adam Wierman"
+    ],
+    "abstract": "Traditional reinforcement learning (RL) assumes the agents make decisions\nbased on Markov decision processes (MDPs) with one-step transition models. In\nmany real-world applications, such as energy management and stock investment,\nagents can access multi-step predictions of future states, which provide\nadditional advantages for decision making. However, multi-step predictions are\ninherently high-dimensional: naively embedding these predictions into an MDP\nleads to an exponential blow-up in state space and the curse of dimensionality.\nMoreover, existing RL theory provides few tools to analyze prediction-augmented\nMDPs, as it typically works on one-step transition kernels and cannot\naccommodate multi-step predictions with errors or partial action-coverage. We\naddress these challenges with three key innovations: First, we propose the\n\\emph{Bayesian value function} to characterize the optimal prediction-aware\npolicy tractably. Second, we develop a novel \\emph{Bellman-Jensen Gap} analysis\non the Bayesian value function, which enables characterizing the value of\nimperfect predictions. Third, we introduce BOLA (Bayesian Offline Learning with\nOnline Adaptation), a two-stage model-based RL algorithm that separates offline\nBayesian value learning from lightweight online adaptation to real-time\npredictions. We prove that BOLA remains sample-efficient even under imperfect\npredictions. We validate our theory and algorithm on synthetic MDPs and a\nreal-world wind energy storage control problem.",
+    "published": "2025-10-21T14:47:08+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18687v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "Learning Task-Agnostic Representations through Multi-Teacher Distillation",
+    "authors": [
+      "Philippe Formont",
+      "Maxime Darrin",
+      "Banafsheh Karimian",
+      "Jackie CK Cheung",
+      "Eric Granger",
+      "Ismail Ben Ayed",
+      "Mohammadhadi Shateri",
+      "Pablo Piantanida"
+    ],
+    "abstract": "Casting complex inputs into tractable representations is a critical step\nacross various fields. Diverse embedding models emerge from differences in\narchitectures, loss functions, input modalities and datasets, each capturing\nunique aspects of the input. Multi-teacher distillation leverages this\ndiversity to enrich representations but often remains tailored to specific\ntasks. In this paper, we introduce a task-agnostic framework based on a\n``majority vote\" objective function. We demonstrate that this function is\nbounded by the mutual information between student and teachers' embeddings,\nleading to a task-agnostic distillation loss that eliminates dependence on\ntask-specific labels or prior knowledge. Our evaluations across text, vision\nmodels, and molecular modeling show that our method effectively leverages\nteacher diversity, resulting in representations enabling better performance for\na wide range of downstream tasks such as classification, clustering, or\nregression. Additionally, we train and release state-of-the-art embedding\nmodels, enhancing downstream performance in various modalities.",
+    "published": "2025-10-21T14:36:33+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18680v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "Exploring Membership Inference Vulnerabilities in Clinical Large Language Models",
+    "authors": [
+      "Alexander Nemecek",
+      "Zebin Yun",
+      "Zahra Rahmani",
+      "Yaniv Harel",
+      "Vipin Chaudhary",
+      "Mahmood Sharif",
+      "Erman Ayday"
+    ],
+    "abstract": "As large language models (LLMs) become progressively more embedded in\nclinical decision-support, documentation, and patient-information systems,\nensuring their privacy and trustworthiness has emerged as an imperative\nchallenge for the healthcare sector. Fine-tuning LLMs on sensitive electronic\nhealth record (EHR) data improves domain alignment but also raises the risk of\nexposing patient information through model behaviors. In this work-in-progress,\nwe present an exploratory empirical study on membership inference\nvulnerabilities in clinical LLMs, focusing on whether adversaries can infer if\nspecific patient records were used during model training. Using a\nstate-of-the-art clinical question-answering model, Llemr, we evaluate both\ncanonical loss-based attacks and a domain-motivated paraphrasing-based\nperturbation strategy that more realistically reflects clinical adversarial\nconditions. Our preliminary findings reveal limited but measurable membership\nleakage, suggesting that current clinical LLMs provide partial resistance yet\nremain susceptible to subtle privacy risks that could undermine trust in\nclinical AI adoption. These results motivate continued development of\ncontext-aware, domain-specific privacy evaluations and defenses such as\ndifferential privacy fine-tuning and paraphrase-aware training, to strengthen\nthe security and trustworthiness of healthcare AI systems.",
+    "published": "2025-10-21T14:27:48+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18674v1",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "Sherlock Your Queries: Learning to Ask the Right Questions for Dialogue-Based Retrieval",
+    "authors": [
+      "Dong Yun",
+      "Marco Schouten",
+      "Dim Papadopoulos"
+    ],
+    "abstract": "User queries in information retrieval are often ambiguous, making it\nchallenging for systems to identify a user's target from a single query. While\nrecent dialogue-based interactive retrieval systems can clarify user intent,\nthey are inefficient as they often lack an explicit strategy to ask the most\ninformative questions. To address this limitation, we propose SherlockLLM, a\ndialogue-driven retrieval framework that learns an optimal questioning strategy\nvia Reinforcement Learning (RL) and avoids the need for large-scale annotated\ndialogue data. In our framework, an agent is trained to generate a sequence of\nbinary questions to efficiently narrow down the search space. To validate our\napproach, we introduce a benchmark with both structured and unstructured tasks.\nExperimental results show that SherlockLLM is a robust and efficient solution.\nOn the structured tasks, its performance matches strong baselines and\napproaches the theoretical optimal defined by binary search. On the challenging\nunstructured task, our agent significantly outperforms these baselines,\nshowcasing its ability to learn a highly effective information-seeking dialogue\npolicy.",
+    "published": "2025-10-21T14:10:42+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18659v1",
+    "categories": [
+      "cs.AI"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "A Compositional Paradigm for Foundation Models: Towards Smarter Robotic Agents",
+    "authors": [
+      "Luigi Quarantiello",
+      "Elia Piccoli",
+      "Jack Bell",
+      "Malio Li",
+      "Giacomo Carfì",
+      "Eric Nuertey Coleman",
+      "Gerlando Gramaglia",
+      "Lanpei Li",
+      "Mauro Madeddu",
+      "Irene Testa",
+      "Vincenzo Lomonaco"
+    ],
+    "abstract": "The birth of Foundation Models brought unprecedented results in a wide range\nof tasks, from language to vision, to robotic control. These models are able to\nprocess huge quantities of data, and can extract and develop rich\nrepresentations, which can be employed across different domains and modalities.\nHowever, they still have issues in adapting to dynamic, real-world scenarios\nwithout retraining the entire model from scratch. In this work, we propose the\napplication of Continual Learning and Compositionality principles to foster the\ndevelopment of more flexible, efficient and smart AI solutions.",
+    "published": "2025-10-21T13:06:52+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18608v1",
+    "categories": [
+      "cs.RO",
+      "cs.LG"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "A new implementation of Network GARCH Model",
+    "authors": [
+      "Peiyi Zhou"
+    ],
+    "abstract": "Volatility clustering and spillovers are key features of real-world financial\ntime series when there are a lot of cross-sectional financial assets. While\nnetwork analysis helps connect stocks that are 'similar' or 'correlated', which\nis effective to link volatility spillovers between stocks, contemporary\nmultivariate ARCH-GARCH formulations struggle to represent structured network\ndependence and remain parsimonious. We introduce the Generalised Network GARCH\n(GNGARCH) model as a network volatility model that embeds the GARCH dynamics\nwithin the Generalised Network Autoregressive (GNAR) framework, to capture the\ndynamic volatility of financial asset return by both the asset itself and its\n'neighbouring' assets from the constructed virtual network. The proposed\nvolatility model GNGARCH also addresses the limitations for current studies of\nnetwork GARCH by adapting neighbouring volatility persistence, dynamic\nconditional covariance updates, and allowing higher-order neighbouring effects\nrather than only immediate neighbours. This paper provides the model\nderivation, vectorisation and conversion, stationarity conditions, and also an\nextension by incorporating threshold coefficients to capture leverage effects.\nWe show that the GNGARCH is a valid volatility model satisfying the stylised\nfacts of financial return series through simulation. Parameter estimation is\nthen performed by using squared returns as variance proxy and minimising a loss\nfunction that is either mean squared error (MSE) or quasi-likelihood (QLIKE).\nWe apply our model on 75 of the most active US stocks under a virtual network,\nand highlight the model's ability in volatility estimation and forecast.",
+    "published": "2025-10-21T12:58:45+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18599v1",
+    "categories": [
+      "stat.ME"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "CUARewardBench: A Benchmark for Evaluating Reward Models on Computer-using Agent",
+    "authors": [
+      "Haojia Lin",
+      "Xiaoyu Tan",
+      "Yulei Qin",
+      "Zihan Xu",
+      "Yuchen Shi",
+      "Zongyi Li",
+      "Gang Li",
+      "Shaofei Cai",
+      "Siqi Cai",
+      "Chaoyou Fu",
+      "Ke Li",
+      "Xing Sun"
+    ],
+    "abstract": "Computer-using agents (CUAs) enable task completion through natural\ninteraction with operating systems and software interfaces. While script-based\nverifiers are widely adopted for evaluation, they suffer from limited\nscalability and inability to provide step-wise assessment. Reward models offer\npromising alternatives, but their effectiveness on CUA evaluation remains\nlargely underexplored. To address this gap, we present CUARewardBench,\ncomprising four key contributions: (1) First-ever Comprehensive CUA Reward\nBenchmark: We introduce the first benchmark for evaluating both outcome reward\nmodels (ORM) and process reward models (PRM) on CUA tasks, enabling systematic\nassessment across trajectory-level and step-level evaluation. (2) Diverse,\nPractical and Reliable Dataset: CUARewardBench encompasses trajectories from 10\nsoftware categories and 7 agent architectures with varying performance levels\n(25.9%-50.8% success rates). All trajectories are expertly annotated through\ncarefully designed protocols, with rigorous quality control to ensure\nreliability and practical applicability. (3) Comprehensive Analysis and\nInsights: Through extensive experiments across 7 vision-language models and 3\nprompt templates, we reveal critical limitations of current CUA RMs, including\ninsufficient visual reasoning capabilities, knowledge deficiencies, and the\nsuperiority of general VLMs over specialized CUA models for reward evaluation.\n(4) Unanimous Prompt Ensemble (UPE): Based on the insights from our\ncomprehensive analysis, we propose UPE, a novel ensemble method that\nsignificantly enhances reward model reliability through strict unanimous voting\nand strategic prompt-template configurations. UPE achieves 89.8% precision and\n93.3% NPV for ORM, and 81.7% precision and 85.1% NPV for PRM, substantially\noutperforming single VLMs and traditional ensemble approaches.",
+    "published": "2025-10-21T12:53:40+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18596v1",
+    "categories": [
+      "cs.SE",
+      "cs.CV"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "A Structured Evaluation Framework for Low-Code Platform Selection: A Multi-Criteria Decision Model for Enterprise Digital Transformation",
+    "authors": [
+      "Antonio Lamanna"
+    ],
+    "abstract": "The rapid adoption of Low-Code Development Platforms (LCDPs) has created a\ncritical need for systematic evaluation methodologies that enable organizations\nto make informed platform selection decisions. This paper presents a\ncomprehensive evaluation framework based on five key criteria: Business Process\nOrchestration, UI/UX Customization, Integration and Interoperability,\nGovernance and Security, and AI-Enhanced Automation. We propose a weighted\nscoring model that allows organizations to quantitatively assess and compare\ndifferent low-code platforms based on their specific requirements and strategic\npriorities. The framework addresses the gap between marketing-driven platform\ncomparisons and rigorous, context-specific evaluation methodologies. Through\nempirical validation in enterprise environments, we demonstrate how this\nstructured approach can significantly improve decision-making outcomes and\nreduce the risk of platform lock-in or inadequate solution selection.",
+    "published": "2025-10-21T12:42:11+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18590v1",
+    "categories": [
+      "cs.SE",
+      "cs.HC",
+      "D.2.2; D.2.11; K.6.3"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "Tokencake: A KV-Cache-centric Serving Framework for LLM-based Multi-Agent Applications",
+    "authors": [
+      "Zhuohang Bian",
+      "Feiyang Wu",
+      "Teng Ma",
+      "Youwei Zhuo"
+    ],
+    "abstract": "Large Language Models (LLMs) are increasingly deployed in complex multi-agent\napplications that use external function calls. This workload creates severe\nperformance challenges for the KV Cache: space contention leads to the eviction\nof critical agents' caches and time underutilization leaves the cache of agents\nstalled on long-running tool calls idling in GPU memory. We present Tokencake,\na KV-Cache-centric serving framework that co-optimizes scheduling and memory\nmanagement with an agent-aware design. Tokencake's Space Scheduler uses dynamic\nmemory partitioning to shield critical agents from contention, while its Time\nScheduler employs a proactive offload and predictive upload mechanism to\nrepurpose GPU memory during function call stalls. Our evaluation on\nrepresentative multi-agent benchmarks shows that Tokencake can reduce\nend-to-end latency by over 47.06%, improve effective GPU memory utilization by\nup to 16.9% compared to vLLM.",
+    "published": "2025-10-21T12:39:32+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18586v1",
+    "categories": [
+      "cs.DC"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "CLASP: Cost-Optimized LLM-based Agentic System for Phishing Detection",
+    "authors": [
+      "Fouad Trad",
+      "Ali Chehab"
+    ],
+    "abstract": "Phishing websites remain a significant cybersecurity threat, necessitating\naccurate and cost-effective detection mechanisms. In this paper, we present\nCLASP, a novel system that effectively identifies phishing websites by\nleveraging multiple intelligent agents, built using large language models\n(LLMs), to analyze different aspects of a web resource. The system processes\nURLs or QR codes, employing specialized LLM-based agents that evaluate the URL\nstructure, webpage screenshot, and HTML content to predict potential phishing\nthreats. To optimize performance while minimizing operational costs, we\nexperimented with multiple combination strategies for agent-based analysis,\nultimately designing a strategic combination that ensures the per-website\nevaluation expense remains minimal without compromising detection accuracy. We\ntested various LLMs, including Gemini 1.5 Flash and GPT-4o mini, to build these\nagents and found that Gemini 1.5 Flash achieved the best performance with an F1\nscore of 83.01% on a newly curated dataset. Also, the system maintained an\naverage processing time of 2.78 seconds per website and an API cost of around\n$3.18 per 1,000 websites. Moreover, CLASP surpasses leading previous solutions,\nachieving over 40% higher recall and a 20% improvement in F1 score for phishing\ndetection on the collected dataset. To support further research, we have made\nour dataset publicly available, supporting the development of more advanced\nphishing detection systems.",
+    "published": "2025-10-21T12:38:52+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18585v1",
+    "categories": [
+      "cs.CR"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "The Cost-Benefit of Interdisciplinarity in AI for Mental Health",
+    "authors": [
+      "Katerina Drakos",
+      "Eva Paraschou",
+      "Simay Toplu",
+      "Line Harder Clemmensen",
+      "Christoph Lütge",
+      "Nicole Nadine Lønfeldt",
+      "Sneha Das"
+    ],
+    "abstract": "Artificial intelligence has been introduced as a way to improve access to\nmental health support. However, most AI mental health chatbots rely on a\nlimited range of disciplinary input, and fail to integrate expertise across the\nchatbot's lifecycle. This paper examines the cost-benefit trade-off of\ninterdisciplinary collaboration in AI mental health chatbots. We argue that\ninvolving experts from technology, healthcare, ethics, and law across key\nlifecycle phases is essential to ensure value-alignment and compliance with the\nhigh-risk requirements of the AI Act. We also highlight practical\nrecommendations and existing frameworks to help balance the challenges and\nbenefits of interdisciplinarity in mental health chatbots.",
+    "published": "2025-10-21T12:34:44+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18581v1",
+    "categories": [
+      "cs.CY",
+      "cs.AI"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "QuantEvolve: Automating Quantitative Strategy Discovery through Multi-Agent Evolutionary Framework",
+    "authors": [
+      "Junhyeog Yun",
+      "Hyoun Jun Lee",
+      "Insu Jeon"
+    ],
+    "abstract": "Automating quantitative trading strategy development in dynamic markets is\nchallenging, especially with increasing demand for personalized investment\nsolutions. Existing methods often fail to explore the vast strategy space while\npreserving the diversity essential for robust performance across changing\nmarket conditions. We present QuantEvolve, an evolutionary framework that\ncombines quality-diversity optimization with hypothesis-driven strategy\ngeneration. QuantEvolve employs a feature map aligned with investor\npreferences, such as strategy type, risk profile, turnover, and return\ncharacteristics, to maintain a diverse set of effective strategies. It also\nintegrates a hypothesis-driven multi-agent system to systematically explore the\nstrategy space through iterative generation and evaluation. This approach\nproduces diverse, sophisticated strategies that adapt to both market regime\nshifts and individual investment needs. Empirical results show that QuantEvolve\noutperforms conventional baselines, validating its effectiveness. We release a\ndataset of evolved strategies to support future research.",
+    "published": "2025-10-21T12:22:16+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18569v1",
+    "categories": [
+      "cs.AI"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "Contextual Search in Principal-Agent Games: The Curse of Degeneracy",
+    "authors": [
+      "Yiding Feng",
+      "Mengfan Ma",
+      "Bo Peng",
+      "Zongqi Wan"
+    ],
+    "abstract": "In this work, we introduce and study contextual search in general\nprincipal-agent games, where a principal repeatedly interacts with agents by\noffering contracts based on contextual information and historical feedback,\nwithout knowing the agents' true costs or rewards. Our model generalizes\nclassical contextual pricing by accommodating richer agent action spaces. Over\n$T$ rounds with $d$-dimensional contexts, we establish an asymptotically tight\nexponential $T^{1 - \\Theta(1/d)}$ bound in terms of the pessimistic Stackelberg\nregret, benchmarked against the best utility for the principal that is\nconsistent with the observed feedback.\n  We also establish a lower bound of $\\Omega(T^{\\frac{1}{2}-\\frac{1}{2d}})$ on\nthe classic Stackelberg regret for principal-agent games, demonstrating a\nsurprising double-exponential hardness separation from the contextual pricing\nproblem (a.k.a, the principal-agent game with two actions), which is known to\nadmit a near-optimal $O(d\\log\\log T)$ regret bound [Kleinberg and Leighton,\n2003, Leme and Schneider, 2018, Liu et al., 2021]. In particular, this\ndouble-exponential hardness separation occurs even in the special case with\nthree actions and two-dimensional context. We identify that this significant\nincrease in learning difficulty arises from a structural phenomenon that we\ncall contextual action degeneracy, where adversarially chosen contexts can make\nsome actions strictly dominated (and hence unincentivizable), blocking the\nprincipal's ability to explore or learn about them, and fundamentally limiting\nlearning progress.",
+    "published": "2025-10-21T12:21:43+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18567v1",
+    "categories": [
+      "cs.GT"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "The Trust Paradox in LLM-Based Multi-Agent Systems: When Collaboration Becomes a Security Vulnerability",
+    "authors": [
+      "Zijie Xu",
+      "Minfeng Qi",
+      "Shiqing Wu",
+      "Lefeng Zhang",
+      "Qiwen Wei",
+      "Han He",
+      "Ningran Li"
+    ],
+    "abstract": "Multi-agent systems powered by large language models are advancing rapidly,\nyet the tension between mutual trust and security remains underexplored. We\nintroduce and empirically validate the Trust-Vulnerability Paradox (TVP):\nincreasing inter-agent trust to enhance coordination simultaneously expands\nrisks of over-exposure and over-authorization. To investigate this paradox, we\nconstruct a scenario-game dataset spanning 3 macro scenes and 19 sub-scenes,\nand run extensive closed-loop interactions with trust explicitly parameterized.\nUsing Minimum Necessary Information (MNI) as the safety baseline, we propose\ntwo unified metrics: Over-Exposure Rate (OER) to detect boundary violations,\nand Authorization Drift (AD) to capture sensitivity to trust levels. Results\nacross multiple model backends and orchestration frameworks reveal consistent\ntrends: higher trust improves task success but also heightens exposure risks,\nwith heterogeneous trust-to-risk mappings across systems. We further examine\ndefenses such as Sensitive Information Repartitioning and Guardian-Agent\nenablement, both of which reduce OER and attenuate AD. Overall, this study\nformalizes TVP, establishes reproducible baselines with unified metrics, and\ndemonstrates that trust must be modeled and scheduled as a first-class security\nvariable in multi-agent system design.",
+    "published": "2025-10-21T12:18:39+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18563v1",
+    "categories": [
+      "cs.CR"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "WebDevJudge: Evaluating (M)LLMs as Critiques for Web Development Quality",
+    "authors": [
+      "Chunyang Li",
+      "Yilun Zheng",
+      "Xinting Huang",
+      "Tianqing Fang",
+      "Jiahao Xu",
+      "Yangqiu Song",
+      "Lihui Chen",
+      "Han Hu"
+    ],
+    "abstract": "The paradigm of LLM-as-a-judge is emerging as a scalable and efficient\nalternative to human evaluation, demonstrating strong performance on\nwell-defined tasks. However, its reliability in open-ended tasks with dynamic\nenvironments and complex interactions remains unexplored. To bridge the gap, we\nintroduce WebDevJudge, a systematic benchmark for assessing LLM-as-a-judge\nperformance in web development, with support for both non-interactive\nevaluation based on static observations and continuous interactive evaluation\nwith a dynamic web environment. WebDevJudge comprises human preference labels\nover paired web implementations, annotated with structured and query-grounded\nrubrics to ensure high-quality ground truth. Using this benchmark, we\ncomprehensively evaluate various evaluators, including LLMs, MLLMs, and agentic\nworkflows. We systematically investigate the impact of different paradigms and\nguidance mechanisms. Our experiments reveal a significant gap between LLM\njudges and human experts. In-depth analysis indicates this gap stems from\nfundamental model limitations, including failures in recognizing functional\nequivalence, verifying task feasibility, and mitigating bias. Overall,\nWebDevJudge presents a significant challenge to LLM-as-a-judge, offering\ninsights to guide future research toward developing more reliable and capable\nautomated evaluators for complicated scenarios. Code and data are available at\nhttps://github.com/lcy2723/WebDevJudge.",
+    "published": "2025-10-21T12:16:04+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18560v1",
+    "categories": [
+      "cs.SE",
+      "cs.AI"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "RAISE: A Unified Framework for Responsible AI Scoring and Evaluation",
+    "authors": [
+      "Loc Phuc Truong Nguyen",
+      "Hung Thanh Do"
+    ],
+    "abstract": "As AI systems enter high-stakes domains, evaluation must extend beyond\npredictive accuracy to include explainability, fairness, robustness, and\nsustainability. We introduce RAISE (Responsible AI Scoring and Evaluation), a\nunified framework that quantifies model performance across these four\ndimensions and aggregates them into a single, holistic Responsibility Score. We\nevaluated three deep learning models: a Multilayer Perceptron (MLP), a Tabular\nResNet, and a Feature Tokenizer Transformer, on structured datasets from\nfinance, healthcare, and socioeconomics. Our findings reveal critical\ntrade-offs: the MLP demonstrated strong sustainability and robustness, the\nTransformer excelled in explainability and fairness at a very high\nenvironmental cost, and the Tabular ResNet offered a balanced profile. These\nresults underscore that no single model dominates across all responsibility\ncriteria, highlighting the necessity of multi-dimensional evaluation for\nresponsible model selection. Our implementation is available at:\nhttps://github.com/raise-framework/raise.",
+    "published": "2025-10-21T12:15:13+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18559v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CE",
+      "cs.CY"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "Building Trust in Clinical LLMs: Bias Analysis and Dataset Transparency",
+    "authors": [
+      "Svetlana Maslenkova",
+      "Clement Christophe",
+      "Marco AF Pimentel",
+      "Tathagata Raha",
+      "Muhammad Umar Salman",
+      "Ahmed Al Mahrooqi",
+      "Avani Gupta",
+      "Shadab Khan",
+      "Ronnie Rajan",
+      "Praveenkumar Kanithi"
+    ],
+    "abstract": "Large language models offer transformative potential for healthcare, yet\ntheir responsible and equitable development depends critically on a deeper\nunderstanding of how training data characteristics influence model behavior,\nincluding the potential for bias. Current practices in dataset curation and\nbias assessment often lack the necessary transparency, creating an urgent need\nfor comprehensive evaluation frameworks to foster trust and guide improvements.\nIn this study, we present an in-depth analysis of potential downstream biases\nin clinical language models, with a focus on differential opioid prescription\ntendencies across diverse demographic groups, such as ethnicity, gender, and\nage. As part of this investigation, we introduce HC4: Healthcare Comprehensive\nCommons Corpus, a novel and extensively curated pretraining dataset exceeding\n89 billion tokens. Our evaluation leverages both established general benchmarks\nand a novel, healthcare-specific methodology, offering crucial insights to\nsupport fairness and safety in clinical AI applications.",
+    "published": "2025-10-21T12:08:39+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18556v1",
+    "categories": [
+      "cs.CL"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "Descriptor: Occluded nuScenes: A Multi-Sensor Dataset for Evaluating Perception Robustness in Automated Driving",
+    "authors": [
+      "Sanjay Kumar",
+      "Tim Brophy",
+      "Reenu Mohandas",
+      "Eoin Martino Grua",
+      "Ganesh Sistu",
+      "Valentina Donzella",
+      "Ciaran Eising"
+    ],
+    "abstract": "Robust perception in automated driving requires reliable performance under\nadverse conditions, where sensors may be affected by partial failures or\nenvironmental occlusions. Although existing autonomous driving datasets\ninherently contain sensor noise and environmental variability, very few enable\ncontrolled, parameterised, and reproducible degradations across multiple\nsensing modalities. This gap limits the ability to systematically evaluate how\nperception and fusion architectures perform under well-defined adverse\nconditions. To address this limitation, we introduce the Occluded nuScenes\nDataset, a novel extension of the widely used nuScenes benchmark. For the\ncamera modality, we release both the full and mini versions with four types of\nocclusions, two adapted from public implementations and two newly designed. For\nradar and LiDAR, we provide parameterised occlusion scripts that implement\nthree types of degradations each, enabling flexible and repeatable generation\nof occluded data. This resource supports consistent, reproducible evaluation of\nperception models under partial sensor failures and environmental interference.\nBy releasing the first multi-sensor occlusion dataset with controlled and\nreproducible degradations, we aim to advance research on robust sensor fusion,\nresilience analysis, and safety-critical perception in automated driving.",
+    "published": "2025-10-21T12:02:26+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18552v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "SOCIA-Nabla: Textual Gradient Meets Multi-Agent Orchestration for Automated Simulator Generation",
+    "authors": [
+      "Yuncheng Hua",
+      "Sion Weatherhead",
+      "Mehdi Jafari",
+      "Hao Xue",
+      "Flora D. Salim"
+    ],
+    "abstract": "In this paper, we present SOCIA-Nabla, an end-to-end, agentic framework that\ntreats simulator construction asinstance optimization over code within a\ntextual computation graph. Specialized LLM-driven agents are embedded as graph\nnodes, and a workflow manager executes a loss-driven loop: code synthesis ->\nexecution -> evaluation -> code repair. The optimizer performs Textual-Gradient\nDescent (TGD), while human-in-the-loop interaction is reserved for task-spec\nconfirmation, minimizing expert effort and keeping the code itself as the\ntrainable object. Across three CPS tasks, i.e., User Modeling, Mask Adoption,\nand Personal Mobility, SOCIA-Nabla attains state-of-the-art overall accuracy.\nBy unifying multi-agent orchestration with a loss-aligned optimization view,\nSOCIA-Nabla converts brittle prompt pipelines into reproducible,\nconstraint-aware simulator code generation that scales across domains and\nsimulation granularities. This work is under review, and we will release the\ncode soon.",
+    "published": "2025-10-21T12:00:00+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18551v1",
+    "categories": [
+      "cs.AI",
+      "I.2.7"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "JAUNT: Joint Alignment of User Intent and Network State for QoE-centric LLM Tool Routing",
+    "authors": [
+      "Enhan Li",
+      "Hongyang Du"
+    ],
+    "abstract": "Large Language Models (LLMs) increasingly rely on emerging protocols such as\nthe Model Context Protocol (MCP) to invoke external tools and services.\nHowever, current tool routing mechanisms remain fragile because they only\nconsider functional matching between users' queries and tools. In practice,\nuser intent expressed through queries can be vague or underspecified, and the\nactual Quality of Experience (QoE) also depends on external factors such as\nlink latency and server availability that are not captured by semantics alone.\nTo address this challenge, we propose JAUNT, a framework for Joint Alignment of\nUser intent and Network state in QoE-centric Tool routing. JAUNT introduces a\ndual-view alignment strategy that interprets user intent while employing LLM\nagents to construct network profiles, mapping numerical performance indicators\ninto the semantic space to guide routing. We further design a benchmark that\nintegrates diverse user request patterns with heterogeneous network states,\nenabling systematic evaluation of QoE outcomes. Experimental results show that\nJAUNT significantly improves QoE compared with several baselines, demonstrating\nthe importance of aligning both intent and network state for scalable LLM\nservice orchestration.",
+    "published": "2025-10-21T11:58:36+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18550v1",
+    "categories": [
+      "cs.NI"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "EfficientNav: Towards On-Device Object-Goal Navigation with Navigation Map Caching and Retrieval",
+    "authors": [
+      "Zebin Yang",
+      "Sunjian Zheng",
+      "Tong Xie",
+      "Tianshi Xu",
+      "Bo Yu",
+      "Fan Wang",
+      "Jie Tang",
+      "Shaoshan Liu",
+      "Meng Li"
+    ],
+    "abstract": "Object-goal navigation (ObjNav) tasks an agent with navigating to the\nlocation of a specific object in an unseen environment. Embodied agents\nequipped with large language models (LLMs) and online constructed navigation\nmaps can perform ObjNav in a zero-shot manner. However, existing agents heavily\nrely on giant LLMs on the cloud, e.g., GPT-4, while directly switching to small\nLLMs, e.g., LLaMA3.2-11b, suffer from significant success rate drops due to\nlimited model capacity for understanding complex navigation maps, which\nprevents deploying ObjNav on local devices. At the same time, the long prompt\nintroduced by the navigation map description will cause high planning latency\non local devices. In this paper, we propose EfficientNav to enable on-device\nefficient LLM-based zero-shot ObjNav. To help the smaller LLMs better\nunderstand the environment, we propose semantics-aware memory retrieval to\nprune redundant information in navigation maps. To reduce planning latency, we\npropose discrete memory caching and attention-based memory clustering to\nefficiently save and re-use the KV cache. Extensive experimental results\ndemonstrate that EfficientNav achieves 11.1% improvement in success rate on\nHM3D benchmark over GPT-4-based baselines, and demonstrates 6.7x real-time\nlatency reduction and 4.7x end-to-end latency reduction over GPT-4 planner. Our\ncode will be released soon.",
+    "published": "2025-10-21T11:52:44+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18546v1",
+    "categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "SLICE: SLO-Driven Scheduling for LLM Inference on Edge Computing Devices",
+    "authors": [
+      "Pan Zhou",
+      "Yiming Lei",
+      "Ling Liu",
+      "Xiaoqiong Xu",
+      "Ying Cai",
+      "Daji Ergu",
+      "Hongfang Yu",
+      "Yueyue Dai"
+    ],
+    "abstract": "Large Language Models (LLMs), as the foundational architecture for\nnext-generation interactive AI applications, not only power intelligent\ndialogue systems but also drive the evolution of embodied intelligence on edge\ndevices, including humanoid robots, smart vehicles, and other scenarios. The\napplications running on these edge devices impose differentiated Service Level\nObjectives (SLO) requirements on LLM services, specifically manifested as\ndistinct constraints on Time to First Token (TTFT) and Time Per Output Token\n(TPOT) as well as end-to-end latency. Notably, edge devices typically handle\nreal-time tasks that are extremely sensitive to latency, such as machine\ncontrol and navigation planning. However, existing scheduling service systems\nstill prioritize maximizing output token throughput as the sole optimization\nobjective, failing to adequately address the diversity of SLO requirements.\nThis ultimately results in persistently high violation rates for end-to-end\nlatency or TPOT related SLOs.\n  This paper proposes SLICE, an innovative scheduling solution designed for\nedge computing scenarios with differentiated SLO requirements. By combining a\nutility-maximizing request scheduling algorithm with a dynamic iterative\ncontrol mechanism for generation rates, SLICE significantly improves LLM\ninference service SLO attainment. Experimental results demonstrate that\ncompared to state-of-the-art solutions Orca and FastServe, SLICE achieves up to\n35x higher SLO attainment and 3.4x advantage in task completion time than the\nother two solutions.",
+    "published": "2025-10-21T11:47:42+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18544v1",
+    "categories": [
+      "cs.DC"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "Socialized Learning and Emergent Behaviors in Multi-Agent Systems based on Multimodal Large Language Models",
+    "authors": [
+      "Sureyya Akin",
+      "Shruti T. Tiwari",
+      "Ram Bhattacharya",
+      "Sagar A. Raman",
+      "Kiran Mohanty",
+      "Sita Krishnan"
+    ],
+    "abstract": "This search introduces the Multimodal Socialized Learning Framework (M-S2L),\ndesigned to foster emergent social intelligence in AI agents by integrating\nMultimodal Large Language Models (M-LLMs) with social learning mechanisms. The\nframework equips agents with multimodal perception (vision and text) and\nstructured action capabilities, enabling physical manipulation and grounded\nmultimodal communication (e.g., text with visual pointers). M-S2L combines\ndirect reinforcement learning with two novel social learning pathways:\nmultimodal observational learning and communication-driven learning from\nfeedback, augmented by an episodic memory system for long-term social context.\n  We evaluate M-S2L in a Collaborative Assembly Environment (CAE), where agent\nteams must construct complex devices from ambiguous blueprints under\ninformational asymmetry. Across tasks of increasing complexity, M-S2L agents\nconsistently outperform Text-Only and No-Social-Learning baselines in Task\nCompletion Rate and Time to Completion, particularly in dynamic problem-solving\nscenarios. Ablation studies confirm the necessity of both multimodality and\nsocialized learning. Our analysis reveals the emergence of efficient\ncommunication protocols integrating visual pointers with concise text,\nalongside rapid role specialization leading to stable labor division.\nQualitative case studies demonstrate agents' abilities for shared awareness,\ndynamic re-planning, and adaptive problem-solving, suggesting a nascent form of\nmachine social cognition. These findings indicate that integrating multimodal\nperception with explicit social learning is critical for developing human-like\ncollaborative intelligence in multi-agent systems.",
+    "published": "2025-10-21T10:57:39+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18515v1",
+    "categories": [
+      "cs.MA"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "DWaste: Greener AI for Waste Sorting using Mobile and Edge Devices",
+    "authors": [
+      "Suman Kunwar"
+    ],
+    "abstract": "The rise of convenience packaging has led to generation of enormous waste,\nmaking efficient waste sorting crucial for sustainable waste management. To\naddress this, we developed DWaste, a computer vision-powered platform designed\nfor real-time waste sorting on resource-constrained smartphones and edge\ndevices, including offline functionality. We benchmarked various image\nclassification models (EfficientNetV2S/M, ResNet50/101, MobileNet) and object\ndetection (YOLOv8n, YOLOv11n) using a subset of our own waste data set and\nannotated it using the custom tool Annotated Lab. We found a clear trade-off\nbetween accuracy and resource consumption: the best classifier,\nEfficientNetV2S, achieved high accuracy (~ 96%) but suffered from high latency\n(~ 0.22s) and elevated carbon emissions. In contrast, lightweight object\ndetection models delivered strong performance (up to 77% mAP) with ultra-fast\ninference (~ 0.03s) and significantly smaller model sizes (< 7MB), making them\nideal for real-time, low-power use. Model quantization further maximized\nefficiency, substantially reducing model size and VRAM usage by up to 75%. Our\nwork demonstrates the successful implementation of \"Greener AI\" models to\nsupport real-time, sustainable waste sorting on edge devices.",
+    "published": "2025-10-21T10:55:32+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18513v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "Identity-Aware Large Language Models require Cultural Reasoning",
+    "authors": [
+      "Alistair Plum",
+      "Anne-Marie Lutgen",
+      "Christoph Purschke",
+      "Achim Rettinger"
+    ],
+    "abstract": "Large language models have become the latest trend in natural language\nprocessing, heavily featuring in the digital tools we use every day. However,\ntheir replies often reflect a narrow cultural viewpoint that overlooks the\ndiversity of global users. This missing capability could be referred to as\ncultural reasoning, which we define here as the capacity of a model to\nrecognise culture-specific knowledge values and social norms, and to adjust its\noutput so that it aligns with the expectations of individual users. Because\nculture shapes interpretation, emotional resonance, and acceptable behaviour,\ncultural reasoning is essential for identity-aware AI. When this capacity is\nlimited or absent, models can sustain stereotypes, ignore minority\nperspectives, erode trust, and perpetuate hate. Recent empirical studies\nstrongly suggest that current models default to Western norms when judging\nmoral dilemmas, interpreting idioms, or offering advice, and that fine-tuning\non survey data only partly reduces this tendency. The present evaluation\nmethods mainly report static accuracy scores and thus fail to capture adaptive\nreasoning in context. Although broader datasets can help, they cannot alone\nensure genuine cultural competence. Therefore, we argue that cultural reasoning\nmust be treated as a foundational capability alongside factual accuracy and\nlinguistic coherence. By clarifying the concept and outlining initial\ndirections for its assessment, a foundation is laid for future systems to be\nable to respond with greater sensitivity to the complex fabric of human\nculture.",
+    "published": "2025-10-21T10:50:51+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18510v1",
+    "categories": [
+      "cs.CL"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "VAPU: System for Autonomous Legacy Code Modernization",
+    "authors": [
+      "Valtteri Ala-Salmi",
+      "Zeeshan Rasheed",
+      "Abdul Malik Sami",
+      "Muhammad Waseem",
+      "Kai-Kristian Kemell",
+      "Jussi Rasku",
+      "Mika Saari",
+      "Pekka Abrahamsson"
+    ],
+    "abstract": "In this study, we present a solution for the modernization of legacy\napplications, an area of code generation where LLM-based multi-agent systems\nare proving essential for complex multi-phased tasks. Legacy applications often\ncontain deprecated components that create compatibility, security, and\nreliability risks, but high resource costs make companies hesitate to update.\nWe take a step forward to integrate an LLM-based multi-agent system as part of\na legacy web application update to provide a cost-effective solution to update\nlegacy applications autonomously. We propose a multi-agent system named a\nVerifying Agent Pipeline Updater (VAPU), which is designed to update code files\nin phases while simulating different roles in a software development team. In\nour previous study, we evaluated the system for legacy version updates by using\nsix legacy web application view files by resulting errors and accomplished\nrequirements. This study extends the previous evaluation of a multi-agent\npipeline system by extending the evaluation of VAPU from a single LLM to five\nLLMs and using the temperature parameter in both 0 to 1 settings. Additionally,\nwe tested the system with 20 open-source Python GitHub projects. The results of\nthe evaluation were compared to Zero-Shot Learning (ZSL) and One-Shot Learning\n(OSL) prompts. The extended evaluation of VAPU showed that particularly in a\nlow-temperature VAPU can get similar level of error count compared to the\nZSL/OSL prompts but with a higher level of fulfilled requirements, depending on\nthe LLM. VAPU showed up to 22.5% increase in the succeeding Python file update\nrequirements compared to ZSL/OSL prompts. The study indicates that an LLM-based\nmulti-agent system is a capable solution to update components of a legacy\napplication autonomously.",
+    "published": "2025-10-21T10:50:33+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18509v1",
+    "categories": [
+      "cs.SE"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "Crucible: Quantifying the Potential of Control Algorithms through LLM Agents",
+    "authors": [
+      "Lianchen Jia",
+      "Chaoyang Li",
+      "Qian Houde",
+      "Tianchi Huang",
+      "Jiangchuan Liu",
+      "Lifeng Sun"
+    ],
+    "abstract": "Control algorithms in production environments typically require domain\nexperts to tune their parameters and logic for specific scenarios. However,\nexisting research predominantly focuses on algorithmic performance under ideal\nor default configurations, overlooking the critical aspect of Tuning Potential.\nTo bridge this gap, we introduce Crucible, an agent that employs an LLM-driven,\nmulti-level expert simulation to turn algorithms and defines a formalized\nmetric to quantitatively evaluate their Tuning Potential. We demonstrate\nCrucible's effectiveness across a wide spectrum of case studies, from classic\ncontrol tasks to complex computer systems, and validate its findings in a\nreal-world deployment. Our experimental results reveal that Crucible\nsystematically quantifies the tunable space across different algorithms.\nFurthermore, Crucible provides a new dimension for algorithm analysis and\ndesign, which ultimately leads to performance improvements. Our code is\navailable at https://github.com/thu-media/Crucible.",
+    "published": "2025-10-21T10:25:26+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18491v1",
+    "categories": [
+      "cs.AI"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "AndroidControl-Curated: Revealing the True Potential of GUI Agents through Benchmark Purification",
+    "authors": [
+      "Ho Fai Leung",
+      "Xiaoyan Xi",
+      "Fei Zuo"
+    ],
+    "abstract": "On-device virtual assistants like Siri and Google Assistant are increasingly\npivotal, yet their capabilities are hamstrung by a reliance on rigid,\ndeveloper-dependent APIs. GUI agents offer a powerful, API-independent\nalternative, but their adoption is hindered by the perception of poor\nperformance, as even the best models (e.g. Qwen3-VL-235B) scores are capped at\naround 60% on benchmarks like AndroidControl, far from viability for real-world\nuse. Our research reveals that issue lies not only with the models but with the\nbenchmarks themselves. We identified notable shortcomings in AndroidControl,\nincluding ambiguities and factual errors, which systematically underrates agent\ncapabilities. To address this critical oversight, we enhanced AndroidControl\ninto AndroidControl-Curated, a refined version of the benchmark improved\nthrough a rigorous purification pipeline. On this enhanced benchmark,\nstate-of-the-art models achieve success rates nearing 75% on complex tasks (15%\nimprovement), reflecting that on-device GUI agents are actually closer to\npractical deployment than previously thought. We introduce our new SOTA model,\nMagma-R1- 3B, post-trained on just 2.4k curated samples using 60 hours of an\nH20 GPU (approximately $60). Despite being 200 times smaller in parameters,\nthis model delivers performance comparable to Qwen3- VL-235B. We release both\nAndroidControl-Curated benchmark and Magma-R1 model to the research community,\nencouraging adoption of this enhanced benchmark to better reflect model\ncapabilities and accelerate the development of robust, on-device virtual\nassistants.",
+    "published": "2025-10-21T10:11:33+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.18488v1",
+    "categories": [
+      "cs.AI",
+      "cs.SE"
+    ],
+    "source": "arxiv"
+  },
+  {
+    "title": "A Multi-AI Agent System for Autonomous Optimization of Agentic AI Solutions via Iterative Refinement and LLM-Driven Feedback Loops",
+    "authors": [
+      "K. Yuksel",
+      "H. Sawaf"
+    ],
+    "abstract": "Agentic AI systems use specialized agents to handle tasks within complex workflows, enabling automation and efficiency. However, optimizing these systems often requires labor-intensive, manual adjustments to refine roles, tasks, and interactions. This paper introduces a framework for autonomously optimizing Agentic AI solutions across industries, such as NLP-driven enterprise applications. The system employs agents for Refinement, Execution, Evaluation, Modification, and Documentation, leveraging iterative feedback loops powered by an LLM (Llama 3.2-3B). The framework achieves optimal performance without human input by autonomously generating and testing hypotheses to improve system configurations. This approach enhances scalability and adaptability, offering a robust solution for real-world applications in dynamic environments. Case studies across diverse domains illustrate the transformative impact of this framework, showcasing significant improvements in output quality, relevance, and actionability. All data for these case studies, including original and evolved agent codes, along with their outputs, are here: https://anonymous.4open.science/r/evolver-1D11/",
+    "published": "2024-12-22",
+    "citations": 10,
+    "url": "https://www.semanticscholar.org/paper/417b37838b58d0cf790cd572605662559d5c1dc6",
+    "venue": "arXiv.org",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "Agent Q: Advanced Reasoning and Learning for Autonomous AI Agents",
+    "authors": [
+      "Pranav Putta",
+      "Edmund Mills",
+      "Naman Garg",
+      "S. Motwani",
+      "Chelsea Finn",
+      "Divyansh Garg",
+      "Rafael Rafailov"
+    ],
+    "abstract": "Large Language Models (LLMs) have shown remarkable capabilities in natural language tasks requiring complex reasoning, yet their application in agentic, multi-step reasoning within interactive environments remains a difficult challenge. Traditional supervised pre-training on static datasets falls short in enabling autonomous agent capabilities needed to perform complex decision-making in dynamic settings like web navigation. Previous attempts to bridge this ga-through supervised fine-tuning on curated expert demonstrations-often suffer from compounding errors and limited exploration data, resulting in sub-optimal policy outcomes. To overcome these challenges, we propose a framework that combines guided Monte Carlo Tree Search (MCTS) search with a self-critique mechanism and iterative fine-tuning on agent interactions using an off-policy variant of the Direct Preference Optimization (DPO) algorithm. Our method allows LLM agents to learn effectively from both successful and unsuccessful trajectories, thereby improving their generalization in complex, multi-step reasoning tasks. We validate our approach in the WebShop environment-a simulated e-commerce platform where it consistently outperforms behavior cloning and reinforced fine-tuning baseline, and beats average human performance when equipped with the capability to do online search. In real-world booking scenarios, our methodology boosts Llama-3 70B model's zero-shot performance from 18.6% to 81.7% success rate (a 340% relative increase) after a single day of data collection and further to 95.4% with online search. We believe this represents a substantial leap forward in the capabilities of autonomous agents, paving the way for more sophisticated and reliable decision-making in real-world settings.",
+    "published": "2024-08-13",
+    "citations": 119,
+    "url": "https://www.semanticscholar.org/paper/b393f619a87c5b6aa63c7abc7118263205b6aa62",
+    "venue": "arXiv.org",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "AI Agents and Agentic AI-Navigating a Plethora of Concepts for Future Manufacturing",
+    "authors": [
+      "Yinwang Ren",
+      "Yangyang Liu",
+      "Tang Ji",
+      "Xun Xu"
+    ],
+    "abstract": "AI agents are autonomous systems designed to perceive, reason, and act within dynamic environments. With the rapid advancements in generative AI (GenAI), large language models (LLMs) and multimodal large language models (MLLMs) have significantly improved AI agents'capabilities in semantic comprehension, complex reasoning, and autonomous decision-making. At the same time, the rise of Agentic AI highlights adaptability and goal-directed autonomy in dynamic and complex environments. LLMs-based AI Agents (LLM-Agents), MLLMs-based AI Agents (MLLM-Agents), and Agentic AI contribute to expanding AI's capabilities in information processing, environmental perception, and autonomous decision-making, opening new avenues for smart manufacturing. However, the definitions, capability boundaries, and practical applications of these emerging AI paradigms in smart manufacturing remain unclear. To address this gap, this study systematically reviews the evolution of AI and AI agent technologies, examines the core concepts and technological advancements of LLM-Agents, MLLM-Agents, and Agentic AI, and explores their potential applications in and integration into manufacturing, along with the potential challenges they may face.",
+    "published": "2025-07-01",
+    "citations": 2,
+    "url": "https://www.semanticscholar.org/paper/b564e05750a42e36508ee6f896afb6f34e591585",
+    "venue": "Journal of manufacturing systems",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "UAVs Meet Agentic AI: A Multidomain Survey of Autonomous Aerial Intelligence and Agentic UAVs",
+    "authors": [
+      "Ranjan Sapkota",
+      "Konstantinos I. Roumeliotis",
+      "Manoj Karkee"
+    ],
+    "abstract": "Agentic UAVs represent a new frontier in autonomous aerial intelligence, integrating perception, decision-making, memory, and collaborative planning to operate adaptively in complex, real-world environments. Driven by recent advances in Agentic AI, these systems surpass traditional UAVs by exhibiting goal-driven behavior, contextual reasoning, and interactive autonomy. We provide a comprehensive foundation for understanding the architectural components and enabling technologies that distinguish Agentic UAVs from traditional autonomous UAVs. Furthermore, a detailed comparative analysis highlights advancements in autonomy with AI agents, learning, and mission flexibility. This study explores seven high-impact application domains precision agriculture, construction&mining, disaster response, environmental monitoring, infrastructure inspection, logistics, security, and wildlife conservation, illustrating the broad societal value of agentic aerial intelligence. Furthermore, we identify key challenges in technical constraints, regulatory limitations, and data-model reliability, and we present emerging solutions across hardware innovation, learning architectures, and human-AI interaction. Finally, a future roadmap is proposed, outlining pathways toward self-evolving aerial ecosystems, system-level collaboration, and sustainable, equitable deployments. This survey establishes a foundational framework for the future development, deployment, and governance of agentic aerial systems (Agentic UAVs) across diverse societal and industrial domains.",
+    "published": "2025-06-08",
+    "citations": 3,
+    "url": "https://www.semanticscholar.org/paper/9c696bc89703058b0a795ec581cd5f93b89ee07f",
+    "venue": "arXiv.org",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "AI-powered consumer segmentation and targeting: A theoretical framework for precision marketing by autonomous (Agentic) AI",
+    "authors": [
+      "Arunraju Chinnaraju"
+    ],
+    "abstract": "Consumer segmentation and targeting are essential for precision marketing, allowing businesses to deliver personalized experiences. The article explores the transformative role of autonomous AI agents in enhancing consumer segmentation and targeting within the data-driven marketing landscape. The proposed framework integrates machine learning (ML), natural language processing (NLP), and predictive analytics to continuously optimize segmentation models, enabling real-time targeting and hyper-personalization without human oversight. Autonomous agents dynamically manage segmentation by leveraging unsupervised learning algorithms, including K-means and DBSCAN, to refine clusters and discover complex micro-segments based on evolving consumer behavior and preferences.\n\nThe AI agents use reinforcement learning to enhance campaign management through continuous feedback loops. By monitoring real-time performance metrics, such as click-through rates and conversions, they dynamically adjust ad spend, resource allocation, and personalized content delivery across digital channels. Predictive models, including Random Forests and time series analysis, further support real-time consumer behavior forecasting. This automation reduces operational inefficiencies, speeds up decision-making, and ensures marketing strategies remain relevant and adaptive. Ethical considerations, including data privacy and algorithmic fairness, are integral to the framework, promoting responsible AI deployment. Case studies from industries such as e-commerce and streaming illustrate significant improvements in campaign efficiency, customer engagement, and return on investment. Autonomous AI enables scalable, data-driven solutions that give businesses a competitive edge in rapidly changing markets.",
+    "published": "2025-02-28",
+    "citations": 3,
+    "url": "https://www.semanticscholar.org/paper/73fec6afac5d6e7a0550fec7f2a600ca2681ce4b",
+    "venue": "International Journal of Science and Research Archive",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "Agentic AI Frameworks in SMMEs: A Systematic Literature Review of Ecosystemic Interconnected Agents",
+    "authors": [
+      "Peter Adebowale Olujimi",
+      "P. Owolawi",
+      "R. Mogase",
+      "E. V. Wyk"
+    ],
+    "abstract": "This study examines the application of agentic artificial intelligence (AI) frameworks within small, medium, and micro-enterprises (SMMEs), highlighting how interconnected autonomous agents improve operational efficiency and adaptability. Using the PRISMA 2020 framework, this study systematically identified, screened, and analyzed 66 studies, including peer-reviewed and credible gray literature, published between 2019 and 2024, to assess agentic AI frameworks in SMMEs. Recognizing the constraints faced by SMMEs, such as limited scalability, high operational demands, and restricted access to advanced technologies, the review synthesizes existing research to highlight the characteristics, implementations, and impacts of agentic AI in task automation, decision-making, and ecosystem-wide collaboration. The results demonstrate the potential of agentic AI to address technological, ethical, and infrastructure barriers while promoting innovation, scalability, and competitiveness. This review contributes to the understanding of agentic AI frameworks by offering practical insights and setting the groundwork for further research into their applications in SMMEs’ dynamic and resource-constrained economic environments.",
+    "published": "2025-06-11",
+    "citations": 3,
+    "url": "https://www.semanticscholar.org/paper/e625a1551bd4f8a8535ef31d98ccb77292a94e07",
+    "venue": "Applied Informatics",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "AI Agents and Agentic Systems: A Multi-Expert Analysis",
+    "authors": [
+      "Laurie Hughes",
+      "Yogesh K. Dwivedi",
+      "Tegwen Malik",
+      "Mazen Shawosh",
+      "M. Albashrawi",
+      "Il Jeon",
+      "Vincent Dutot",
+      "Mandanna Appanderanda",
+      "Tom Crick",
+      "Rahul De’",
+      "Mark Fenwick",
+      "Senali Madugoda Gunaratnege",
+      "Paulius Jurcys",
+      "A. Kar",
+      "N. Kshetri",
+      "Keyao Li",
+      "Sashah Mutasa",
+      "Spyridon Samothrakis",
+      "Michael Wade",
+      "Paul Walton"
+    ],
+    "abstract": "ABSTRACT The emergence of AI agents and agentic systems represents a significant milestone in artificial intelligence, enabling autonomous systems to operate, learn, and collaborate in complex environments with minimal human intervention. This paper, drawing on multi-expert perspectives, examines the potential of AI agents and agentic systems to reshape industries by decentralizing decision-making, redefining organizational structures, and enhancing cross-functional collaboration. Specific applications include healthcare systems capable of creating adaptive treatment plans, supply chain agents that predict and address disruptions in real-time, and business process automation that reallocates tasks from humans to AI, improving efficiency and innovation. However, the integration of these systems raises critical challenges, including issues of attribution and shared accountability in decision-making, compatibility with legacy systems, and addressing biases in AI-driven processes. The paper concludes that while agentic systems hold immense promise, robust governance frameworks, cross-industry collaboration, and interdisciplinary research into ethical design are essential. Future research should explore adaptive workforce reskilling strategies, transparent accountability mechanisms, and energy-efficient deployment models to ensure ethical and scalable implementation.",
+    "published": "2025-04-24",
+    "citations": 29,
+    "url": "https://www.semanticscholar.org/paper/46ddc757d49a5cacb0b50f6716a953c0bbea41f9",
+    "venue": "Journal of Computational Information Systems",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "Agentic Web: Weaving the Next Web with AI Agents",
+    "authors": [
+      "Yingxuan Yang",
+      "Mulei Ma",
+      "Yuxuan Huang",
+      "Huacan Chai",
+      "Chenyu Gong",
+      "Haoran Geng",
+      "Yuanjian Zhou",
+      "Ying Wen",
+      "Meng Fang",
+      "Muhao Chen",
+      "Shangding Gu",
+      "Ming Jin",
+      "C. Spanos",
+      "Yang Yang",
+      "Pieter Abbeel",
+      "Dawn Song",
+      "Weinan Zhang",
+      "Jun Wang"
+    ],
+    "abstract": "The emergence of AI agents powered by large language models (LLMs) marks a pivotal shift toward the Agentic Web, a new phase of the internet defined by autonomous, goal-driven interactions. In this paradigm, agents interact directly with one another to plan, coordinate, and execute complex tasks on behalf of users. This transition from human-driven to machine-to-machine interaction allows intent to be delegated, relieving users from routine digital operations and enabling a more interactive, automated web experience. In this paper, we present a structured framework for understanding and building the Agentic Web. We trace its evolution from the PC and Mobile Web eras and identify the core technological foundations that support this shift. Central to our framework is a conceptual model consisting of three key dimensions: intelligence, interaction, and economics. These dimensions collectively enable the capabilities of AI agents, such as retrieval, recommendation, planning, and collaboration. We analyze the architectural and infrastructural challenges involved in creating scalable agentic systems, including communication protocols, orchestration strategies, and emerging paradigms such as the Agent Attention Economy. We conclude by discussing the potential applications, societal risks, and governance issues posed by agentic systems, and outline research directions for developing open, secure, and intelligent ecosystems shaped by both human intent and autonomous agent behavior. A continuously updated collection of relevant studies for agentic web is available at: https://github.com/SafeRL-Lab/agentic-web.",
+    "published": "2025-07-28",
+    "citations": 9,
+    "url": "https://www.semanticscholar.org/paper/72e7e16d52379e038d852621a6f994b84a5c513c",
+    "venue": "arXiv.org",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "AI Agentic workflows and Enterprise APIs: Adapting API architectures for the age of AI agents",
+    "authors": [
+      "Vaibhav Tupe",
+      "Shrinath Thube"
+    ],
+    "abstract": "The rapid advancement of Generative AI has catalyzed the emergence of autonomous AI agents, presenting unprecedented challenges for enterprise computing infrastructures. Current enterprise API architectures are predominantly designed for human-driven, predefined interaction patterns, rendering them ill-equipped to support intelligent agents' dynamic, goal-oriented behaviors. This research systematically examines the architectural adaptations for enterprise APIs to support AI agentic workflows effectively. Through a comprehensive analysis of existing API design paradigms, agent interaction models, and emerging technological constraints, the paper develops a strategic framework for API transformation. The study employs a mixed-method approach, combining theoretical modeling, comparative analysis, and exploratory design principles to address critical challenges in standardization, performance, and intelligent interaction. The proposed research contributes a conceptual model for next-generation enterprise APIs that can seamlessly integrate with autonomous AI agent ecosystems, offering significant implications for future enterprise computing architectures.",
+    "published": "2025-01-22",
+    "citations": 6,
+    "url": "https://www.semanticscholar.org/paper/bc02154754a4e32cac6f0a9340b054c4cad011f0",
+    "venue": "arXiv.org",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "ExACT: Teaching AI Agents to Explore with Reflective-MCTS and Exploratory Learning",
+    "authors": [
+      "Xiao Yu",
+      "Baolin Peng",
+      "Vineeth Vajipey",
+      "Hao Cheng",
+      "Michel Galley",
+      "Jianfeng Gao",
+      "Zhou Yu"
+    ],
+    "abstract": "Autonomous agents have demonstrated significant potential in automating complex multistep decision-making tasks. However, even state-of-the-art vision-language models (VLMs), such as GPT-4o, still fall short of human-level performance, particularly in intricate web environments and long-horizon tasks. To address these limitations, we present ExACT, an approach to combine test-time search and self-learning to build o1-like models for agentic applications. We first introduce Reflective Monte Carlo Tree Search (R-MCTS), a novel test time algorithm designed to enhance AI agents' ability to explore decision space on the fly. R-MCTS extends traditional MCTS by 1) incorporating contrastive reflection, allowing agents to learn from past interactions and dynamically improve their search efficiency; and 2) using multi-agent debate for reliable state evaluation. Next, we introduce Exploratory Learning, a novel learning strategy to teach agents to search at inference time without relying on any external search algorithms. On the challenging VisualWebArena benchmark, our GPT-4o based R-MCTS agent achieves a 6% to 30% relative improvement across various tasks compared to the previous state-of-the-art. Additionally, we show that the knowledge and experience gained from test-time search can be effectively transferred back to GPT-4o via fine-tuning. After Exploratory Learning, GPT-4o 1) demonstrates the ability to explore the environment, evaluate a state, and backtrack to viable ones when it detects that the current state cannot lead to success, and 2) matches 87% of R-MCTS's performance while using significantly less compute. Notably, our work demonstrates the compute scaling properties in both training - data collection with R-MCTS - and testing time. These results suggest a promising research direction to enhance VLMs' capabilities for agentic applications via test-time search and self-learning.",
+    "published": "2024-10-02",
+    "citations": 32,
+    "url": "https://www.semanticscholar.org/paper/ac62f95e60a42bbceacfb390abecd95659947bc1",
+    "venue": "International Conference on Learning Representations",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "Risk Alignment in Agentic AI Systems",
+    "authors": [
+      "Hayley Clatterbuck",
+      "Clinton Castro",
+      "Arvo Munoz Mor'an"
+    ],
+    "abstract": "Agentic AIs $-$ AIs that are capable and permitted to undertake complex actions with little supervision $-$ mark a new frontier in AI capabilities and raise new questions about how to safely create and align such systems with users, developers, and society. Because agents' actions are influenced by their attitudes toward risk, one key aspect of alignment concerns the risk profiles of agentic AIs. Risk alignment will matter for user satisfaction and trust, but it will also have important ramifications for society more broadly, especially as agentic AIs become more autonomous and are allowed to control key aspects of our lives. AIs with reckless attitudes toward risk (either because they are calibrated to reckless human users or are poorly designed) may pose significant threats. They might also open 'responsibility gaps' in which there is no agent who can be held accountable for harmful actions. What risk attitudes should guide an agentic AI's decision-making? How might we design AI systems that are calibrated to the risk attitudes of their users? What guardrails, if any, should be placed on the range of permissible risk attitudes? What are the ethical considerations involved when designing systems that make risky decisions on behalf of others? We present three papers that bear on key normative and technical aspects of these questions.",
+    "published": "2024-10-02",
+    "citations": 8,
+    "url": "https://www.semanticscholar.org/paper/fe51c71a94a26b280e20fd5315da588aa3137c7d",
+    "venue": "arXiv.org",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "Cocoa: Co-Planning and Co-Execution with AI Agents",
+    "authors": [
+      "K. Feng",
+      "Kevin Pu",
+      "Matt Latzke",
+      "Tal August",
+      "Pao Siangliulue",
+      "Jonathan Bragg",
+      "D. S. Weld",
+      "Amy X. Zhang",
+      "Joseph Chee Chang"
+    ],
+    "abstract": "Human collaboration benefits from continuous coordination -- planning, delegating tasks, sharing progress, and adjusting objectives -- to align on shared goals. However, agentic AI systems often limit users to previewing or reviewing an agent's plans for fully autonomous execution. While this may be useful for confirmation and correction, it does not support deeper collaboration between humans and AI agents. We present Cocoa, a system that introduces a novel design pattern -- interactive plans -- for collaborating with an AI agent on complex, multi-step tasks. Informed by a formative study ($n=9$), Cocoa builds on interaction designs from computational notebooks and document editors to support flexible delegation of agency through Co-planning and Co-execution, where users collaboratively compose and execute plans with an Agent. Using scientific research as a sample domain, our lab (n=16) and field deployment (n=7) studies found that Cocoa improved agent steerability without sacrificing ease-of-use compared to a strong chat baseline. Additionally, researchers valued Cocoa for real-world projects and saw the interleaving of co-planning and co-execution as an effective novel paradigm for human-AI collaboration.",
+    "published": "2024-12-14",
+    "citations": 16,
+    "url": "https://www.semanticscholar.org/paper/851506e2b1768c6b46ba0d934e36b8df96a20515",
+    "venue": "arXiv.org",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "Towards Agentic AI on Particle Accelerators",
+    "authors": [
+      "Antonin Sulc",
+      "Thorsten Hellert",
+      "Raimund Kammering",
+      "Hayden Houscher",
+      "Jason St. John"
+    ],
+    "abstract": "As particle accelerators grow in complexity, traditional control methods face increasing challenges in achieving optimal performance. This paper envisions a paradigm shift: a decentralized multi-agent framework for accelerator control, powered by Large Language Models (LLMs) and distributed among autonomous agents. We present a proposition of a self-improving decentralized system where intelligent agents handle high-level tasks and communication and each agent is specialized to control individual accelerator components. This approach raises some questions: What are the future applications of AI in particle accelerators? How can we implement an autonomous complex system such as a particle accelerator where agents gradually improve through experience and human feedback? What are the implications of integrating a human-in-the-loop component for labeling operational data and providing expert guidance? We show three examples, where we demonstrate the viability of such architecture.",
+    "published": "2024-09-10",
+    "citations": 4,
+    "url": "https://www.semanticscholar.org/paper/83a1b9a519e904c8f8e6d0dfb2c0cbbd0e609bd1",
+    "venue": "arXiv.org",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "Agent-E: From Autonomous Web Navigation to Foundational Design Principles in Agentic Systems",
+    "authors": [
+      "Tamer Abuelsaad",
+      "Deepak Akkil",
+      "Prasenjit Dey",
+      "Ashish Jagmohan",
+      "Aditya Vempaty",
+      "Ravi Kokku"
+    ],
+    "abstract": "AI Agents are changing the way work gets done, both in consumer and enterprise domains. However, the design patterns and architectures to build highly capable agents or multi-agent systems are still developing, and the understanding of the implication of various design choices and algorithms is still evolving. In this paper, we present our work on building a novel web agent, Agent-E \\footnote{Our code is available at \\url{https://github.com/EmergenceAI/Agent-E}}. Agent-E introduces numerous architectural improvements over prior state-of-the-art web agents such as hierarchical architecture, flexible DOM distillation and denoising method, and the concept of \\textit{change observation} to guide the agent towards more accurate performance. We first present the results of an evaluation of Agent-E on WebVoyager benchmark dataset and show that Agent-E beats other SOTA text and multi-modal web agents on this benchmark in most categories by 10-30\\%. We then synthesize our learnings from the development of Agent-E into general design principles for developing agentic systems. These include the use of domain-specific primitive skills, the importance of distillation and de-noising of environmental observations, the advantages of a hierarchical architecture, and the role of agentic self-improvement to enhance agent efficiency and efficacy as the agent gathers experience.",
+    "published": "2024-07-17",
+    "citations": 41,
+    "url": "https://www.semanticscholar.org/paper/796006ce7b13b13a993802937d091116b3440de9",
+    "venue": "arXiv.org",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "The Rise of Agentic AI: Implications, Concerns, and the Path Forward",
+    "authors": [
+      "San Murugesan",
+      "San Murugesan"
+    ],
+    "abstract": "Agentic artificial intelligence (AI) represents a transformative leap in AI, evolving beyond reactive systems to autonomous, goal-oriented agents capable of learning, adapting, and making independent decisions. As it presents immense opportunities, its adoption is growing across industries. However, its rise introduces critical challenges. Responsible adoption requires robust governance, transparency, and a well-defined regulatory framework. This article explores agentic AI’s defining characteristics, real-world applications, and transformative potential, and examines its societal and business implications. To shape agentic AI as a trusted, transformative force for responsible innovation and meaningful progress, we propose research directions and offer stakeholder recommendations.",
+    "published": "2025-03-01",
+    "citations": 19,
+    "url": "https://www.semanticscholar.org/paper/0fa90be6622424c74191ef8be3105b865ae1f39a",
+    "venue": "IEEE Intelligent Systems",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "Towards Agentic AI Networking in 6G: A Generative Foundation Model-as-Agent Approach",
+    "authors": [
+      "Yong Xiao",
+      "Guangming Shi",
+      "Ping Zhang"
+    ],
+    "abstract": "The promising potential of AI and network convergence in improving networking performance and enabling new service capabilities has recently attracted significant interest. Existing network AI solutions, while powerful, are mainly built based on the close-loop and passive learning framework, resulting in major limitations in autonomous solution finding and dynamic environmental adaptation. Agentic AI has recently been introduced as a promising solution to address the above limitations and pave the way for true generally intelligent and beneficial AI systems. The key idea is to create a networking ecosystem to support a diverse range of autonomous and embodied AI agents in fulfilling their goals. In this paper, we focus on the novel challenges and requirements of agentic AI networking. We propose AgentNet, a novel framework for supporting interaction, collaborative learning, and knowledge transfer among AI agents. We introduce a general architectural framework of AgentNet and then propose a generative foundation model (GFM)-based implementation in which multiple GFM-as-agents have been created as an interactive knowledge-base to bootstrap the development of embodied AI agents according to different task requirements and environmental features. We consider two application scenarios, digital-twin-based industrial automation and metaverse-based infotainment system, to describe how to apply AgentNet for supporting efficient task-driven collaboration and interaction among AI agents.",
+    "published": "2025-03-20",
+    "citations": 12,
+    "url": "https://www.semanticscholar.org/paper/1ba87ec089ce713354b9b756bfd16c78251f3d7f",
+    "venue": "arXiv.org",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "Accelerating Drug Discovery Through Agentic AI: A Multi-Agent Approach to Laboratory Automation in the DMTA Cycle",
+    "authors": [
+      "Yao Fehlis",
+      "Charles Crain",
+      "Aidan Jensen",
+      "Michael Watson",
+      "James Juhasz",
+      "Paul Mandel",
+      "Betty Liu",
+      "Shawn Mahon",
+      "Daren Wilson",
+      "Nick Lynch-Jonely",
+      "Ben Leedom",
+      "David Fuller"
+    ],
+    "abstract": "The pharmaceutical industry faces unprecedented challenges in drug discovery, with traditional approaches struggling to meet modern therapeutic development demands. This paper introduces a novel AI framework, Tippy, that transforms laboratory automation through specialized AI agents operating within the Design-Make-Test-Analyze (DMTA) cycle. Our multi-agent system employs five specialized agents - Supervisor, Molecule, Lab, Analysis, and Report, with Safety Guardrail oversight - each designed to excel in specific phases of the drug discovery pipeline. Tippy represents the first production-ready implementation of specialized AI agents for automating the DMTA cycle, providing a concrete example of how AI can transform laboratory workflows. By leveraging autonomous AI agents that reason, plan, and collaborate, we demonstrate how Tippy accelerates DMTA cycles while maintaining scientific rigor essential for pharmaceutical research. The system shows significant improvements in workflow efficiency, decision-making speed, and cross-disciplinary coordination, offering a new paradigm for AI-assisted drug discovery.",
+    "published": "2025-07-11",
+    "citations": 3,
+    "url": "https://www.semanticscholar.org/paper/7778c3dc1ca422cd87c6482cfc451a29ec941e5f",
+    "venue": "arXiv.org",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "Enterprise API & Platform Strategy in the era of Agentic AI",
+    "authors": [
+      "Ashay Satav"
+    ],
+    "abstract": "This research paper investigates the critical importance of robust API and platform strategies for enterprises adapting to the proliferation of agentic AI, wherein AI systems autonomously execute tasks with limited human intervention. It addresses the imperative of facilitating seamless communication among AI agents, enterprise data systems, and external applications. The research examines the architectural and performance considerations essential for organizations to maintain competitiveness in this rapidly growing technological landscape of agentic AI projected to expand from $5.1 billion in 2024 to $47.1 billion by 2030. Key elements explored include unified data layer APIs, zero-trust authorization models, event-driven orchestration, and latency-sensitive design. Furthermore, the study considers emerging trends such as AI-powered SDKs, self-optimizing API gateways, autonomous API discovery, and ethical AI governance APIs. The findings emphasize that the adoption of modern API and platform architectures, optimization of performance metrics, and adherence to regulatory mandates are paramount for organizations to fully capitalize on the transformative potential of agentic AI. It is posited that enterprises embracing this paradigm shift will achieve a demonstrable competitive advantage, fostering innovation and operational excellence in the AI-driven future.",
+    "published": "2025-03-16",
+    "citations": 3,
+    "url": "https://www.semanticscholar.org/paper/d6f60f468656ac357314388b0239112d03304ae1",
+    "venue": "Journal of Computer Science and Technology Studies",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "Agentic AI for Cultural Heritage: Embedding Risk Memory in Semantic Digital Twins",
+    "authors": [
+      "Georgios Pavlidis"
+    ],
+    "abstract": "Cultural heritage preservation increasingly relies on data-driven technologies, yet most existing systems lack the cognitive and temporal depth required to support meaningful, transparent, and policy-informed decision-making. This paper proposes a conceptual framework for memory-enabled, semantically grounded AI agents in the cultural domain, showing how the integration of the ICCROM/CCI ABC method for risk assessment into the Panoptes ontology enables the structured encoding of risk cognition over time. This structured risk memory becomes the foundation for agentic reasoning, supporting prioritization, justification, and long-term preservation planning. It is argued that this approach constitutes a principled step toward the development of Cultural Agentic AI: autonomous systems that remember, reason, and act in alignment with cultural values. Proof-of-concept simulations illustrate how memory-enabled agents can trace evolving risk patterns, trigger policy responses, and evaluate mitigation outcomes through structured, explainable reasoning.",
+    "published": "2025-07-07",
+    "citations": 4,
+    "url": "https://www.semanticscholar.org/paper/c239050973c1e0fd3a5d0ea49e4572b42a8ff5b0",
+    "venue": "De Computis",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "Agentic AI for Intent-Based Industrial Automation",
+    "authors": [
+      "Marcos Lima Romero",
+      "Ricardo Suyama"
+    ],
+    "abstract": "The recent development of Agentic AI systems, empowered by autonomous large language models (LLMs) agents with planning and tool-usage capabilities, enables new possibilities for the evolution of industrial automation and reduces the complexity introduced by Industry 4.0. This work proposes a conceptual framework that integrates Agentic AI with the intent-based paradigm, originally developed in network research, to simplify human-machine interaction (HMI) and better align automation systems with the human-centric, sustainable, and resilient principles of Industry 5.0. Based on the intent-based processing, the framework allows human operators to express high-level business or operational goals in natural language, which are decomposed into actionable components. These intents are broken into expectations, conditions, targets, context, and information that guide sub-agents equipped with specialized tools to execute domain-specific tasks. A proof of concept was implemented using the CMAPSS dataset and Google Agent Developer Kit (ADK), demonstrating the feasibility of intent decomposition, agent orchestration, and autonomous decision-making in predictive maintenance scenarios. The results confirm the potential of this approach to reduce technical barriers and enable scalable, intent-driven automation, despite data quality and explainability concerns.",
+    "published": "2025-06-05",
+    "citations": 3,
+    "url": "https://www.semanticscholar.org/paper/c83f38159ee4d3d1a33f2a7c1ab1ac53ceeae91b",
+    "venue": "arXiv.org",
+    "source": "semantic_scholar"
   }
 ]
